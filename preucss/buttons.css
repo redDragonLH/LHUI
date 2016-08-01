@@ -4,29 +4,32 @@ Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
-
+/**先初始化所有按钮，这次没有默认样式，
+在进行默认样式的设置
+*/
 
 /*初始化阿按钮*/
 .pure-button {
     /* Structure */
     display: inline-block;
     zoom: 1;
-    line-height: normal;
+    line-height: normal; /*行高默认 下同*/
     white-space: nowrap;
-    vertical-align: middle;
+    vertical-align: middle;  /*垂直对齐，放在父元素中部*/
     text-align: center;
     cursor: pointer;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
+    -webkit-user-drag: none; /*设置元素可拖动，不可拖动，选中后可以*/
+    -webkit-user-select: none; /*是否可以选中，不可选中*/
+    -moz-user-select: none; /*前缀 下同*/
     -ms-user-select: none;
     user-select: none;
-    -webkit-box-sizing: border-box;
+    -webkit-box-sizing: border-box; /*固定宽高，使之不会增加*/
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 /* Firefox: Get rid of the inner focus border */
+/*去掉聚焦时的边框 火狐*/
 .pure-button::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -35,18 +38,19 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 /*csslint outline-none:false*/
 
 .pure-button {
-    font-family: inherit;
+    font-family: inherit;  /*继承*/
     font-size: 100%;
-    padding: 0.5em 1em;
-    color: #444; /* rgba not supported (IE 8) */
-    color: rgba(0, 0, 0, 0.80); /* rgba supported */
-    border: 1px solid #999;  /*IE 6/7/8*/
+    padding: 0.5em 1em; /*默认在那里*/
+    color: #444; /* rgba not supported (IE 8)  回退*/
+    color: rgba(0, 0, 0, 0.80); /* rgba supported  增强*/
+    border: 1px solid #999;  /*IE 6/7/8  都支持版本*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
     background-color: #E6E6E6;
-    text-decoration: none;
+    text-decoration: none; /*衬线不许有*/
     border-radius: 2px;
 }
 
+/*添加滤镜，给点击的元素半透明黑色滤镜，造成点击效果*/
 .pure-button-hover,
 .pure-button:hover,
 .pure-button:focus {
