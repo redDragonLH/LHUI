@@ -1,0 +1,241 @@
+@charset "UTF-8";/*!
+ Animate.css - http://daneden.me/animate
+ Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+ Copyright (c) 2013 Daniel Eden
+ */
+
+
+@-webkit-keyframes fadeInTop {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+};
+
+@keyframes fadeInTop{
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0,-100%,0);
+		transform: translate3d(0,-100%,0)
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+};
+
+.swiper-slide-active .slide1-float{
+	-webkit-animation-name:float;
+}
+
+@-webkit-keyframes float {
+	0% {
+		-webkit-transform: translateY(0px);
+	}
+	50% {
+		-webkit-transform: translateY(8px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+};
+
+@keyframes float{
+	0% {
+		-webkit-transform: translateY(0px);
+	}
+	50% {
+		-webkit-transform: translateY(8px);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+};
+
+.swiper-slide-active .slide-btn a{
+	-webkit-animation-name:fadeInLeft;
+}
+
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%,0,0);
+		transform:  translate3d(-100%,0,0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+};
+
+@keyframes fadeInLeft{
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%,0,0);
+		transform:  translate3d(-100%,0,0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+};
+.swiper-slide-active .slide-btn a:nth-child(2){
+	-webkit-animation-name:fadeInRight;
+}
+
+
+
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%,0,0);
+		transform:  translate3d(100%,0,0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+};
+
+@keyframes fadeInRight{
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%,0,0);
+		transform:  translate3d(100%,0,0);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+};
+.swiper-slide-active .slide1-tit h1{
+	-webkit-animation-name:fadeIn;
+}
+.slide-5 ul{
+	-webkit-animation-name:fadeIn;
+}
+
+
+@-webkit-keyframes fadeIn{
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+};
+
+@keyframes fadeIn{
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+};
+.swiper-slide-active .slide4-main{
+	-webkit-animation-name:shake;
+}
+
+@-webkit-keyframes shake {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+	}
+
+	35% {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	50%, 55%, 70%, 75%, 90%, 95% {
+		-webkit-transform: translate3d(-5px, 0, 0);
+		transform: translate3d(-5px, 0, 0);
+	}
+
+	60%, 65%, 80%, 85% {
+		-webkit-transform: translate3d(5px, 0, 0);
+		transform: translate3d(5px, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+.swiper-slide-active .slide1-txt{ -webkit-animation-name:scale;}
+
+@-webkit-keyframes scale {
+	0% {-webkit-transform:scale(1.5)}
+	100% {-webkit-transform:scale(1); opacity:1;}
+}
+@keyframes scale {
+	0% {-webkit-transform:scale(1.5)}
+	100% {-webkit-transform:scale(1); opacity:1;}
+}
+
+.swiper-slide-active .slide1-txt2{ -webkit-animation-name:scale2;}
+@-webkit-keyframes scale2 {
+	0%{-webkit-transform:scale(1); opacity:0;}
+	20%{-webkit-transform:scale(1); opacity:0.5;}
+	100%{-webkit-transform:scale(1.2); opacity:0;}
+}
+@keyframes scale2 {
+	0%{-webkit-transform:scale(1); opacity:0;}
+	20%{-webkit-transform:scale(1); opacity:0.5;}
+	100%{-webkit-transform:scale(1.2); opacity:0;}
+}
+.swiper-slide-active .rotateinRT{animation-name: bounceinB;}
+/* 弹入-从下 */
+@-webkit-keyframes bounceinB{
+	0%{opacity:0;-webkit-transform:translateY(100px);}
+	60%{opacity:1;-webkit-transform:translateY(-30px);}
+	80%{-webkit-transform:translateY(10px);}
+	100%{-webkit-transform:translateY(0);}
+}
+@-moz-keyframes bounceinB{
+	0%{opacity:0;-moz-transform:translateY(100px);}
+	60%{opacity:1;-moz-transform:translateY(-30px);}
+	80%{-moz-transform:translateY(10px);}
+	100%{-moz-transform:translateY(0);}
+}
+@-ms-keyframes bounceinB{
+	0%{opacity:0;-ms-transform:translateY(100px);}
+	60%{opacity:1;-ms-transform:translateY(-30px);}
+	80%{-ms-transform:translateY(10px);}
+	100%{-ms-transform:translateY(0);}
+}
+@keyframes bounceinB{
+	0%{opacity:0;transform:translateY(100px);}
+	60%{opacity:1;transform:translateY(-30px);}
+	80%{transform:translateY(10px);}
+	100%{transform:translateY(0);}
+}
