@@ -1,3 +1,5 @@
+/*宽度使用百分百*/
+
 /*!
 Pure v0.6.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
@@ -55,6 +57,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
    The ".opera-only" selector is used to prevent actual prefocus styling
    and is not required in markup.
 */
+
+/*字间距*/
 .opera-only :-o-prefocus,
 .pure-g {
     word-spacing: -0.43em;
@@ -62,22 +66,24 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 .pure-u {
     display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
+    *display: inline; /* IE < 8: fake inline-block 兼容IE8以下*/
+    zoom: 1; /* IE支持 规定缩放比例，清除浮动*/
+    letter-spacing: normal; /*字符间没有多余间距*/
+    word-spacing: normal;  /*同上*/
+    vertical-align: top;   /*把元素顶端与行中最高元素的顶端对齐*/
+    text-rendering: auto;  /*智能识别渲染引擎*/
 }
 
 /*
 Resets the font family back to the OS/browser's default sans-serif font,
 this the same font stack that Normalize.css sets for the `body`.
 */
+/*在*/
 .pure-g [class *= "pure-u"] {
     font-family: sans-serif;
 }
 
+/*栅格的共同样式 同 pure-u*/
 .pure-u-1,
 .pure-u-1-1,
 .pure-u-1-2,
@@ -125,7 +131,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-u-23-24,
 .pure-u-24-24 {
     display: inline-block;
-    *display: inline;
+    *display: inline;  /*兼容IE*/
     zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
@@ -133,6 +139,7 @@ this the same font stack that Normalize.css sets for the `body`.
     text-rendering: auto;
 }
 
+/*各自的宽度*/
 .pure-u-1-24 {
     width: 4.1667%;
     *width: 4.1357%;
