@@ -19,7 +19,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 禁用webkit内核浏览器的文字大小调整功能*/
 }
 
 /**
@@ -74,6 +74,9 @@ video {
  * Remove excess height in iOS 5 devices.
  */
 
+/*所有不带controls属性的audio标签
+controls:指定音频控件的显示方式
+*/
 audio:not([controls]) {
   display: none;
   height: 0;
