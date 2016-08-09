@@ -5,12 +5,15 @@ Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 /*csslint adjoining-classes: false, box-model:false*/
+
+/*初始化菜单父元素的宽高，内外边距不会增大元素宽高*/
 .pure-menu {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+/*定位于屏幕的顶部*/
 .pure-menu-fixed {
     position: fixed;
     left: 0;
@@ -18,28 +21,33 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     z-index: 3;
 }
 
+/*菜单ul元素与子元素的初始化*/
 .pure-menu-list,
 .pure-menu-item {
     position: relative;
 }
 
+/*ul与li去掉前面的点，并且初始化内外边距*/
 .pure-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+/*重置*/
 .pure-menu-item {
     padding: 0;
     margin: 0;
     height: 100%;
 }
 
+/*链接样式
+*/
 .pure-menu-link,
 .pure-menu-heading {
     display: block;
-    text-decoration: none;
-    white-space: nowrap;
+    text-decoration: none; /*干掉下划线*/
+    white-space: nowrap;  /*空白符会被忽略*/
 }
 
 /* HORIZONTAL MENU */
@@ -48,18 +56,20 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     white-space: nowrap;
 }
 
+/*横向排列*/
 .pure-menu-horizontal .pure-menu-list {
     display: inline-block;
 }
 
 /* Initial menus should be inline-block so that they are horizontal */
+
 .pure-menu-horizontal .pure-menu-item,
 .pure-menu-horizontal .pure-menu-heading,
 .pure-menu-horizontal .pure-menu-separator {
     display: inline-block;
-    *display: inline;
+    *display: inline; /*兼容IE低版本*/
     zoom: 1;
-    vertical-align: middle;
+    vertical-align: middle; /*放置在父元素中部*/
 }
 
 /* Submenus should still be display: block; */
@@ -67,6 +77,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     display: block;
 }
 
+/*菜单下的隐藏小菜单*/
 .pure-menu-children {
     display: none;
     position: absolute;
@@ -77,12 +88,14 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     z-index: 3;
 }
 
+
 .pure-menu-horizontal .pure-menu-children {
     left: 0;
     top: auto;
     width: inherit;
 }
 
+/*显示隐藏菜单*/
 .pure-menu-allow-hover:hover > .pure-menu-children,
 .pure-menu-active > .pure-menu-children {
     display: block;
@@ -102,6 +115,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 }
 
 /* scrollable menus */
+/*超出高度的出现滚动条*/
 .pure-menu-scrollable {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -164,6 +178,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 .pure-menu-disabled {
     opacity: .5;
+    
 }
 
 .pure-menu-disabled .pure-menu-link:hover {
