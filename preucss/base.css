@@ -99,6 +99,7 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 
+/*背景颜色透明*/
 a {
   background-color: transparent;
 }
@@ -107,6 +108,7 @@ a {
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 
+/*轮廓线为0*/
 a:active,
 a:hover {
   outline: 0;
@@ -118,7 +120,7 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-
+/*给全称加一个下划线*/
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -126,7 +128,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-
+/*字体加粗*/
 b,
 strong {
   font-weight: bold;
@@ -135,7 +137,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-
+/*斜体字体*/
 dfn {
   font-style: italic;
 }
@@ -152,6 +154,7 @@ h1 {
 
 /**
  * Address styling not present in IE 8/9.
+ * mark:突出显示部分文字
  */
 
 mark {
@@ -161,6 +164,7 @@ mark {
 
 /**
  * Address inconsistent and variable font size in all browsers.
+ * small:呈现小号字体效果
  */
 
 small {
@@ -169,20 +173,22 @@ small {
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ * sub:定义下标文本，将以当前字号的一半显示标签里的文字
+ * sup:定义上标文本，同上
  */
-
+/*在这里重置上下标文本*/
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
+  vertical-align: baseline;  /*垂直对齐在父元素的基线上*/
 }
-
+/*飘在上面*/
 sup {
   top: -0.5em;
 }
-
+/*飘在下面*/
 sub {
   bottom: -0.25em;
 }
@@ -192,6 +198,7 @@ sub {
 
 /**
  * Remove border when inside `a` element in IE 8/9/10.
+ * 去掉img自带的边框
  */
 
 img {
@@ -211,6 +218,8 @@ svg:not(:root) {
 
 /**
  * Address margin not present in IE 8/9 and Safari.
+ * 规定独立的流内容，标签内内容与主内容相关，但删除不影响主内容
+ *
  */
 
 figure {
@@ -229,6 +238,7 @@ hr {
 
 /**
  * Contain overflow in all browsers.
+ * 一般表示计算机代码
  */
 
 pre {
@@ -298,18 +308,20 @@ select {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ *    把下列元素的样式改成按钮样式
  */
 
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: button; /* 2 只有火狐和谷歌内核支持，把元素改成按钮样式*/
   cursor: pointer; /* 3 */
 }
 
 /**
  * Re-set default cursor for disabled elements.
+ * 带有disabled属性的按钮鼠标样式禁止点击
  */
 
 button[disabled],
@@ -319,6 +331,7 @@ html input[disabled] {
 
 /**
  * Remove inner padding and border in Firefox 4+.
+ * 去除火狐的私有属性，重置样式
  */
 
 button::-moz-focus-inner,
@@ -333,7 +346,7 @@ input::-moz-focus-inner {
  */
 
 input {
-  line-height: normal;
+  line-height: normal; /*自动设置行间距*/
 }
 
 /**
@@ -346,7 +359,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 所有内边距和边框会在规定的宽高里绘制，*/
   padding: 0; /* 2 */
 }
 
@@ -387,6 +400,7 @@ input[type="search"]::-webkit-search-decoration {
 
 /**
  * Define consistent border, margin, and padding.
+ *规定fieldset的初始样式
  */
 
 fieldset {
@@ -398,6 +412,7 @@ fieldset {
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * legend：为fieldset定义标题
  */
 
 legend {
@@ -407,6 +422,7 @@ legend {
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
+ * 多行文本输出标签
  */
 
 textarea {
@@ -417,7 +433,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-
+/*optgroup:用于定义选项组，用于组合选项，对相关选项进行组合会使处理更加容易*/
 optgroup {
   font-weight: bold;
 }
@@ -427,11 +443,12 @@ optgroup {
 
 /**
  * Remove most spacing between table cells.
+ * 重置表单元素
  */
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse; /*相邻边框合并成为一个*/
+  border-spacing: 0;  /*单元格距离为 0*/
 }
 
 td,
@@ -461,7 +478,9 @@ th {
 /**
  * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
  * aspect ratio.
+ * 定义图片基础样式
  */
+
 .pure-img {
     max-width: 100%;
     height: auto;
