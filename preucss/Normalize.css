@@ -9,7 +9,7 @@
  * without disabling user zoom.
  * 并没有禁用用户放大。
  */
-
+/*中文用户应该把字体改为中文字体，比如雅黑 苹方*/
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -432,6 +432,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
+
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
