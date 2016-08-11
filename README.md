@@ -8,7 +8,7 @@ purecss有很多不认识的属性与写的方式，很惆怅
   http://www.w3cfuns.com/notes/16799/70306b117ceaf74825b5099ac6687a50.html  
     
     
-base.css是基础的样式重置，使样式在所有主流浏览器上都呈现一样的样式
+base.css是基础的样式重置，使样式在所有主流浏览器上都呈现一样的样式(就是Nomalize...)
 
   ####form.css  
   form.css是表单样式UI，有一部分响应式  
