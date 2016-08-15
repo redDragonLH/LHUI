@@ -4,6 +4,7 @@ Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
+/*响应式栅格*/
 @media screen and (min-width: 35.5em) {
     .pure-u-sm-1,
     .pure-u-sm-1-1,
@@ -52,12 +53,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     .pure-u-sm-23-24,
     .pure-u-sm-24-24 {
         display: inline-block;
-        *display: inline;
+        *display: inline;  /*适配IE*/
         zoom: 1;
-        letter-spacing: normal;
-        word-spacing: normal;
-        vertical-align: top;
-        text-rendering: auto;
+        letter-spacing: normal;  /*字符间没有间隙*/
+        word-spacing: normal; /*字符间间隙，中文无效*/
+        vertical-align: top;  /*元素的顶端与行中最高元素的顶端对齐*/
+        text-rendering: auto; /*优化渲染文字。自动*/
     }
 
     .pure-u-sm-1-24 {
