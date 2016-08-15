@@ -18,3 +18,8 @@ base.css是基础的样式重置，使样式在所有主流浏览器上都呈现
   *、分组输入，把输入框放到不同的 fieldset   标签里面去  
   *、输入框自定义大小，class: pure-input-1;与栅格类似  
   *、圆角 ：class:pure-input-rounded;  
+<!--其他框架文件夹-->
+###深感自己不足，又建立了其他 '其他框架'文件夹来搜集观摩好的代码
+1、有bootstrap-responsive 文件，关于bootstrap响应式的文件  
+2、在网上搜集到的button按钮的样式库文件 ：buttons.css (http://www.bootcss.com/p/buttons/)  
+3、语义化  Semantic UI (http://www.semantic-ui.com/)
