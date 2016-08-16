@@ -1,7 +1,7 @@
 #自制自用UI
-##参考雅虎的 purecss做的
-第一步是看purecss......
-purecss有很多不认识的属性与写的方式，很惆怅  
+##参考雅虎的 preucss做的
+第一步是看preucss......
+preucss有很多不认识的属性与写的方式，很惆怅  
 我也要将Nomalize作为基础样式
 ###Nomalize.css样式重置
   pure是以Nomalize为基础进行的样式重置，所以也把Nomalize放在这里，并且找的一版有中文注释的代码（版权归 AmnEsia 所有）地址为：  
@@ -23,3 +23,5 @@ base.css是基础的样式重置，使样式在所有主流浏览器上都呈现
 1、有bootstrap-responsive 文件，关于bootstrap响应式的文件  
 2、在网上搜集到的button按钮的样式库文件 ：buttons.css (http://www.bootcss.com/p/buttons/)  
 3、语义化  Semantic UI (http://www.semantic-ui.com/)
+  
+  #######preu就是写出一个大概的框架，写出一个样式，然后更多的东西都去让开发者自定义，我觉的这才是真正高度定制的ui，我也将追寻这个核心思想，写出好的框架
