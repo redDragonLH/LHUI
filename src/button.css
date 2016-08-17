@@ -1,6 +1,11 @@
 /*
-
-
+lh-button:初始类名，有一个默认的样式
+lh-button-hover:添加滤镜效果
+lh-button-active：链接激活时的阴影
+lh-button-rounded：圆角效果
+lh-button-circle：圆形按钮
+lh-button-hidden：隐藏按钮
+lh-button-disasbled：禁用按钮
 */
 /*初始化*/
 .lh-button{
