@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>布局实验</title>
+  <!-- <script type="text/javascript" src="src/layout.css"></script> -->
+  <link rel="stylesheet" href="/src/layout.css">
+  <style>
+  *{
+    box-sizing: border-box;
+  }
+    .box{
+      margin: 0 auto;
+      width: 500px;
+      height: 60px;
+      background-color: #aaa;
+    }
+    .sty{
+      display: block;
+      /*float: left;*/
+      border: 1px solid #000;
+      width: 100px;
+      height: 60px;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+<div class="box lh-box lh-box-main-center lh-box-display-right">
+  <span class="sty lh-item-2">1</span>
+  <span class="sty">2</span>
+</div>
+</body>
+</html>
