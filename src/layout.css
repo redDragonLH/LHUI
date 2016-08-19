@@ -1,0 +1,156 @@
+/**
+ *
+ */
+
+/**定义容器的display属性
+*旧版本没有列入WSC标准，所以不用写 display:box
+*/
+.lh-box{
+  display: -webkit-box; /*老版本语法 : Safari,ios,Android browser,older Webkit browsers*/ /*老版本语法 ：Firefox (buggy)*/
+  display: -moz-box; /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox; /*混合版本语法：IE 10 */ /*新版本语法：Chrome 21+ */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex;  /* 新版本语法：Opera 12.1 ,firefox 22+ */
+}
+
+/*子元素主轴对齐方式*/
+/**
+ * 注：如果子元素是行内元素，在很多情况下都要使用 display:block 或 display:inline-block把子元素变成块元素（例如使用 box-flex 属性），这也是旧版和新版语法的区别之一
+ */
+.lh-box-main-center{
+  -webkit-box-pack:center;  /*旧版主轴对齐方式 居中*/
+      box-pack:center;  /*新版主轴对齐方式 居中*/
+      -ms-flex-pack:center;
+  -webkit-justify-content: center;
+     -moz-justify-content: center;
+          justify-content: center;
+}
+
+/*内容交叉轴对齐方式*/
+.lh-box-cross{
+  -webkit-box-align: center; /*Safari,Opera,Chrome*/ /*Firefox*/
+          box-align: center;  /*旧版交叉轴对齐方式 居中对齐*/ /*新版交叉轴对齐方式 居中对齐*/
+  -ms-grid-row-align:center;
+  -webkit-align-items: center;
+     -moz-align-items: center;
+          align-items: center;
+      -ms-flex-align: center;
+}
+
+/*子元素显示方向*/
+/**
+ * 子元素显示方向可通过 box-direction + box-orient + flex-direction 实现
+ *  注： box-direction 只改变子元素的排序，并没有改变对齐方式，需要新增一个 box-pack 来改变对齐方式
+ * 从左到右
+ */
+.lh-box-display-left{
+  -webkit-box-direction: normal; /*旧版子元素显示方向 默认从左到右 吧...*/
+  -webkit-box-orient: horizontal; /*旧版排列方式 水平*/ /*新版，就是主轴方向 默认，从左到右*/
+  -webkit-flex-direction: row; /*新版*/
+     -moz-flex-direction: row; /*新版*/
+      -ms-flex-direction: row; /*新版*/
+          flex-direction: row; /*新版*/
+}
+/**
+ * 从右到左
+ */
+.lh-box-display-right{
+  -webkit-box-pack: end; /*旧版 和box-direction一起改变显示方向*/
+  -webkit-box-direction: reverse; /*只改变排序，未改变方式，需要 box-pack来改变对齐*/
+  -webkit-box-orient: horizontal; /*旧版 水平排列 */ /*新版 子元素方向随主轴方向？ 从右到左*/
+  -webkit-flex-direction: row-reverse; /*新版*/
+     -moz-flex-direction: row-reverse; /*新版*/
+      -ms-flex-direction: row-reverse; /*新版*/
+          flex-direction: row-reverse; /*新版*/
+}
+
+/*上到下*/
+.lh-box-display-top{
+  -webkit-box-direction: normal; /*旧版子元素显示方向*/
+  -webkit-box-orient: vertical; /*旧版 垂直排列*/ /*新版上到下*/
+  -webkit-flex-direction: column; /*新版*/
+     -moz-flex-direction: column; /*新版*/
+      -ms-flex-direction: column; /*新版*/
+          flex-direction: column; /*新版*/
+}
+
+/*下到上*/
+.lh-box-display-bottom{
+  -webkit-box-pack: end; /*旧版 子元素右对齐主轴 配合 box-direction*/
+  -webkit-box-direction: reverse; /*旧版 子元素反方向显示*/
+  -webkit-box-orient: vertical; /*旧版 子元素垂直排列*/ /*新版 子元素跟随主轴，从下到上排列*/
+  -webkit-flex-direction: column-reverse; /*新版*/
+     -moz-flex-direction: column-reverse; /*新版*/
+      -ms-flex-direction: column-reverse; /*新版*/
+          flex-direction: column-reverse; /*新版*/
+}
+
+/*是否允许子元素伸缩*/
+/**
+ * 允许有剩余空间的话子元素放大
+ */
+/*保持 不放大，不缩小(都不写的话默认不放大不缩小)*/
+.lh-item-fixed{
+  -webkit-box-flex: 0.0; /*旧版 子元素大于 0 可伸缩*/ /*放大：值为1则放大，值为0不放大*/
+  -ms-flex-positive: 0;
+  -webkit-flex-grow: 0;
+     -moz-flex-grow: 0;
+          flex-grow: 0;
+    -webkit-box-flex: 0.0; /*缩小：值为1缩写，为0不缩小*/
+    -ms-flex-negative: 0;
+    -webkit-flex-shrink: 0;
+       -moz-flex-shrink: 0;
+            flex-shrink: 0;
+}
+/*放大*/
+.lh-item-enlarge{
+  -webkit-box-flex: 1.0; /*旧版 子元素大于 0 可伸缩*/ /*放大：值为1则放大，值为0不放大*/
+  -ms-flex-positive: 1;
+  -webkit-flex-grow: 1;
+     -moz-flex-grow: 1;
+          flex-grow: 1;
+}
+/**
+ * 空间不足的话允许缩小
+ */
+/*缩小*/
+.lh-item-narrow{
+  -webkit-box-flex: 1.0; /*缩小：值为1缩写，为0不缩小*/
+  -ms-flex-negative: 1;
+  -webkit-flex-shrink: 1;
+     -moz-flex-shrink: 1;
+          flex-shrink: 1;
+}
+
+/*子元素的显示次序*/
+/**
+ * 默认次序为当时写的次序
+ */
+.lh-item-order{
+  -webkit-box-ordinal-group: 1; /*旧版 子元素显示次序，数值越小越靠前*/
+     -ms-flex-order: 1;
+      -webkit-order: 1;
+         -moz-order: 1;
+              order: 1;
+}
+.lh-item-2{
+  -webkit-box-ordinal-group: 2; /*旧版 子元素显示次序，数值越小越靠前*/
+     -ms-flex-order: 2;
+      -webkit-order: 2;
+         -moz-order: 2;
+              order: 2;
+}
+.lh-item-3{
+  -webkit-box-ordinal-group: 3; /*旧版 子元素显示次序，数值越小越靠前*/
+     -ms-flex-order: 3;
+      -webkit-order: 3;
+         -moz-order: 3;
+              order: 3;
+}
+.lh-item-4{
+  -webkit-box-ordinal-group: 4; /*旧版 子元素显示次序，数值越小越靠前*/
+     -ms-flex-order: 4;
+      -webkit-order: 4;
+         -moz-order: 4;
+              order: 4;
+}
