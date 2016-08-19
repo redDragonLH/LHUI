@@ -254,6 +254,16 @@
 }
 
 /*响应式*/
+  /*响应式相关的一些设置*/
+    /*隐藏  小于相应宽度时显示*/
+    .lh-box-lg-hide,
+    .lh-box-md-hide,
+    .lh-box-sm-hide{
+      display: none !important;
+    }
+
+
+
 /*小于 1024则从上到下排列，子元素 width 为 100% */
 @media (max-width: 1024px){
   /*写在父元素上*/
@@ -261,6 +271,15 @@
     /*小于1024就从上到下排列*/
   .lh-box-lg,
   .lh-box-lg-filled{
+    -webkit-box-direction: normal; /*旧版子元素显示方向*/
+    -webkit-box-orient: vertical; /*旧版 垂直排列*/ /*新版上到下*/
+    -webkit-flex-direction: column; /*新版*/
+       -moz-flex-direction: column; /*新版*/
+        -ms-flex-direction: column; /*新版*/
+            flex-direction: column; /*新版*/
+  }
+  /*子元素从下到上显示*/
+  .lh-box-lg-anti-,{
     -webkit-box-direction: reverse; /*旧版 子元素反方向显示*/
     -webkit-box-orient: vertical; /*旧版 子元素垂直排列*/ /*新版 子元素跟随主轴，从下到上排列*/
     -webkit-flex-direction: column-reverse; /*新版*/
@@ -269,7 +288,8 @@
             flex-direction: column-reverse; /*新版*/
   }
   /*小于 1024 父元素满屏*/
-  .lh-box-lg-filled{
+  .lh-box-lg-filled,
+  .lh-box-lg-anti-filled{
     width:100% !important;
   }
   .lh-box-lg [class*=lh-item],
@@ -280,11 +300,11 @@
   }
   /*小于 1024 隐藏*/
   .lh-box-lg-show{
-    display: none;
+    display: none !important;
   }
   /*小于 1024 显示*/
   .lh-box-lg-hide{
-    display: block;
+    display: block !important;
   }
 }
 @media (max-width: 960px){
@@ -293,6 +313,15 @@
     /*小于960就从上到下排列*/
   .lh-box-md,
   .lh-box-md-filled{
+    -webkit-box-direction: normal; /*旧版子元素显示方向*/
+    -webkit-box-orient: vertical; /*旧版 垂直排列*/ /*新版上到下*/
+    -webkit-flex-direction: column; /*新版*/
+       -moz-flex-direction: column; /*新版*/
+        -ms-flex-direction: column; /*新版*/
+            flex-direction: column; /*新版*/
+  }
+  /*子元素从下到上显示*/
+  .lh-box-md-anti-,{
     -webkit-box-direction: reverse; /*旧版 子元素反方向显示*/
     -webkit-box-orient: vertical; /*旧版 子元素垂直排列*/ /*新版 子元素跟随主轴，从下到上排列*/
     -webkit-flex-direction: column-reverse; /*新版*/
@@ -301,7 +330,8 @@
             flex-direction: column-reverse; /*新版*/
   }
   /*小于 970 父元素满屏*/
-  .lh-box-md-filled{
+  .lh-box-md-filled,
+  .lh-box-md-anti-filled{
     width:100% !important;
   }
   .lh-box-md [class*=lh-item],
@@ -312,11 +342,11 @@
   }
   /*小于 970 隐藏*/
   .lh-box-md-show{
-    display: none;
+    display: none !important;
   }
   /*小于 970 显示*/
   .lh-box-md-hide{
-    display: block;
+    display: block !important;
   }
 }
 @media (max-width: 768px){
@@ -325,6 +355,15 @@
   /*小于768就从上到下排列*/
   .lh-box-sm,
   .lh-box-sm-filled{
+    -webkit-box-direction: normal; /*旧版子元素显示方向*/
+    -webkit-box-orient: vertical; /*旧版 垂直排列*/ /*新版上到下*/
+    -webkit-flex-direction: column; /*新版*/
+       -moz-flex-direction: column; /*新版*/
+        -ms-flex-direction: column; /*新版*/
+            flex-direction: column; /*新版*/
+  }
+  /*子元素从下到上显示*/
+  .lh-box-sm-anti-,{
     -webkit-box-direction: reverse; /*旧版 子元素反方向显示*/
     -webkit-box-orient: vertical; /*旧版 子元素垂直排列*/ /*新版 子元素跟随主轴，从下到上排列*/
     -webkit-flex-direction: column-reverse; /*新版*/
@@ -333,7 +372,8 @@
             flex-direction: column-reverse; /*新版*/
   }
   /*小于 768 父元素满屏*/
-  .lh-box-sm-filled{
+  .lh-box-sm-filled,
+  .lh-box-sm-anti-filled{
     width:100% !important;
   }
   /*宽度等于父元素宽度*/
@@ -345,10 +385,10 @@
   }
   /*小于 768 隐藏*/
   .lh-box-sm-show{
-    display: none;
+    display: none !important;
   }
   /*小于 768 显示*/
   .lh-box-sm-hide{
-    display: block;
+    display: block !important;
   }
 }
