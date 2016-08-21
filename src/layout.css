@@ -1,7 +1,11 @@
 /**
  *
  */
-
+/**
+*冲突
+*主轴对齐会使所有子元素在选定的方向显示，但是子元素的排列顺序还会是从从左到右
+*子元素显示顺序不仅会改变子元素的显示顺序而且会使子元素向选定的方向靠拢
+*/
 /**定义容器的display属性
 *旧版本没有列入WSC标准，所以不用写 display:box
 */
@@ -28,9 +32,42 @@
      -moz-justify-content: center;
           justify-content: center;
 }
-
+/*左对齐*/
+.lh-box-main-left{
+  -webkit-box-pack: start;  /*旧版主轴对齐方式 左*/
+          box-pack: start;  /*新版主轴对齐方式 左*/
+      -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-justify-content: flex-start;
+          justify-content: flex-start;
+}
+/*右对齐*/
+.lh-box-main-right{
+  -webkit-box-pack: end;  /*旧版主轴对齐方式 右对齐*/
+          box-pack: end;  /*新版主轴对齐方式 右对齐*/
+      -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+     -moz-justify-content: flex-end;
+          justify-content: flex-end;
+}
+/*主轴左右对齐*/
+.lh-box-main-justify{
+  -webkit-box-pack: justify;  /*旧版主轴对齐方式 左右对齐*/
+          box-pack: justify;  /*新版主轴对齐方式 左右对齐*/
+      -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-justify-content: space-between;
+          justify-content: space-between;
+}
+/*平均分布方式 *旧版不支持*/
+.lh-box-main-around{
+  -webkit-justify-content: space-around;
+     -moz-justify-content: space-around;
+          justify-content: space-around;
+}
 /*内容交叉轴对齐方式*/
-.lh-box-cross{
+/*居中*/
+.lh-box-cross-center{
   -webkit-box-align: center; /*Safari,Opera,Chrome*/ /*Firefox*/
           box-align: center;  /*旧版交叉轴对齐方式 居中对齐*/ /*新版交叉轴对齐方式 居中对齐*/
   -ms-grid-row-align:center;
@@ -38,6 +75,46 @@
      -moz-align-items: center;
           align-items: center;
        -ms-flex-align: center;
+}
+/*顶部对齐*/
+.lh-box-cross-start{
+  -webkit-box-align: start;
+          box-align: start;
+  -ms-grid-row-align:start;
+  -webkit-align-items: flex-start;
+     -moz-align-items: flex-start;
+          align-items: flex-start;
+       -ms-flex-align: flex-start;
+}
+/*底部对齐*/
+.lh-box-cross-end{
+  -webkit-box-align: end;
+          box-align: end;
+  -ms-grid-row-align:end;
+  -webkit-align-items: flex-end;
+     -moz-align-items: flex-end;
+          align-items: flex-end;
+       -ms-flex-align: flex-end;
+}
+/*文本基线对齐*/
+.lh-box-cross-stretch{
+  -webkit-box-align: baseline; /*Safari,Opera,Chrome*/ /*Firefox*/
+          box-align: baseline;
+  -ms-grid-row-align:baseline;
+  -webkit-align-items: stretch;
+     -moz-align-items: stretch;
+          align-items: stretch;
+       -ms-flex-align: stretch;
+}
+/*上下对齐*/
+.lh-box-cross-stretch{
+  -webkit-box-align: stretch; /*Safari,Opera,Chrome*/ /*Firefox*/
+          box-align: stretch;
+  -ms-grid-row-align:stretch;
+  -webkit-align-items: baseline;
+     -moz-align-items: baseline;
+          align-items: baseline;
+       -ms-flex-align: baseline;
 }
 
 /*子元素显示方向*/
@@ -279,7 +356,7 @@
             flex-direction: column; /*新版*/
   }
   /*子元素从下到上显示*/
-  .lh-box-lg-anti-,{
+  .lh-box-lg-anti{
     -webkit-box-direction: reverse; /*旧版 子元素反方向显示*/
     -webkit-box-orient: vertical; /*旧版 子元素垂直排列*/ /*新版 子元素跟随主轴，从下到上排列*/
     -webkit-flex-direction: column-reverse; /*新版*/
@@ -295,15 +372,17 @@
   .lh-box-lg [class*=lh-item],
   .lh-box-lg [class~=lh-item],
   .lh-box-lg-filled [class*=lh-item],
-  .lh-box-lg-filled [class~=lh-item]{
+  .lh-box-lg-filled [class~=lh-item],
+  .lh-box-lg-anti-filled [class*=lh-item],
+  .lh-box-lg-anti-filled [class~=lh-item]{
     width: 100%;
   }
   /*小于 1024 隐藏*/
-  .lh-box-lg-show{
+  .lh-lg-show{
     display: none !important;
   }
   /*小于 1024 显示*/
-  .lh-box-lg-hide{
+  .lh-lg-hide{
     display: block !important;
   }
   /*排序*/
@@ -366,15 +445,17 @@
   .lh-box-md [class*=lh-item],
   .lh-box-md [class~=lh-item],
   .lh-box-md-filled [class*=lh-item],
-  .lh-box-md-filled [class~=lh-item]{
+  .lh-box-md-filled [class~=lh-item],
+  .lh-box-md-anti-filled[class*=lh-item],
+  .lh-box-md-anti-filled[class~=lh-item]{
     width: 100%;
   }
   /*小于 970 隐藏*/
-  .lh-box-md-show{
+  .lh-md-show{
     display: none !important;
   }
   /*小于 970 显示*/
-  .lh-box-md-hide{
+  .lh-md-hide{
     display: block !important;
   }
   /*排序*/
@@ -442,11 +523,11 @@
     width: 100%;
   }
   /*小于 768 隐藏*/
-  .lh-box-sm-show{
+  .lh-sm-show{
     display: none !important;
   }
   /*小于 768 显示*/
-  .lh-box-sm-hide{
+  .lh-sm-hide{
     display: block !important;
   }
   /*排序*/

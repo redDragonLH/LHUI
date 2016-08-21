@@ -8,9 +8,13 @@
   <style>
   *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
     .box{
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
       width: 500px;
       /*height: 60px;*/
       background-color: #aaa;
@@ -26,12 +30,47 @@
     .sty2{
       width: 100px;
     }
+    P{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <p>主轴右对齐</p>
+<div class="box lh-box lh-box-display-right">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+  <p>主轴左对齐</p>
+<div class="box lh-box lh-box-main-left ">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+  <p>主轴居中对齐，小于1024从上到下排列</p>
 <div class="box lh-box lh-box-main-center lh-box-lg-filled">
   <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+<p>主轴居中对齐，小于1024从下到上排列</p>
+<div class="box lh-box lh-box-main-center lh-box-lg-anti lh-box-lg-anti-filled">
+  <span class="sty  lh-item-1-5">1</span>
   <span class="sty  lh-item-2-5">2</span>
+</div>
+<p>主轴居中对齐，小于1024隐藏</p>
+<div class="box lh-box lh-box-main-center lh-box-lg-filled">
+<span class="sty  lh-item-2-5 lh-lg-show">1</span>
+<span class="sty  lh-item-1-5">2</span>
+</div>
+<p>主轴居中对齐，小于1024显示</p>
+<div class="box lh-box lh-box-main-center lh-box-lg-anti lh-box-lg-anti-filled">
+<span class="sty  lh-item-1-5">1</span>
+<span class="sty  lh-item-2-5 lh-lg-hide" style="display:none;">2</span>
+</div>
+<p>主轴居中对齐，单个元素次序</p>
+<div class="box lh-box lh-box-main-center ">
+<span class="sty  lh-item-1-5 lh-item-order-1-lg">1</span>
+<span class="sty  lh-item-2-5">2</span>
+<span class="sty  lh-item-1-10">3</span>
 </div>
 </body>
 </html>
