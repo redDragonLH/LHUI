@@ -88,7 +88,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     z-index: 3;
 }
 
-
+/*横向菜单的子元素下拉菜单*/
 .pure-menu-horizontal .pure-menu-children {
     left: 0;
     top: auto;
@@ -113,6 +113,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 .pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after {
     content: "\25BE";
 }
+
 
 /* scrollable menus */
 /*超出高度的出现滚动条*/
@@ -178,7 +179,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 .pure-menu-disabled {
     opacity: .5;
-    
 }
 
 .pure-menu-disabled .pure-menu-link:hover {
