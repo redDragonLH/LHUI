@@ -342,7 +342,7 @@
 
 
 /*小于 1024则从上到下排列，子元素 width 为 100% */
-@media (max-width: 1024px){
+@media (max-width: 1100px){
   /*写在父元素上*/
 
     /*小于1024就从上到下排列*/
@@ -558,5 +558,7 @@
         -webkit-order: 4;
            -moz-order: 4;
                 order: 4;
+
+
   }
 }
