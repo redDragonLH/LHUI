@@ -22,7 +22,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     text-align: center;
 }
 
-
+/*定义储存格样式*/
 .pure-table td,
 .pure-table th {
     border-left: 1px solid #cbcbcb;/*  inner column border */
@@ -35,13 +35,13 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 /* Consider removing this next declaration block, as it causes problems when
 there's a rowspan on the first cell. Case added to the tests. issue#432 */
-/*首个子元素*/
+/*每行首个子元素的左边框为 零*/
 .pure-table td:first-child,
 .pure-table th:first-child {
     border-left-width: 0;
 }
 
-
+/*每个单元格的头部*/
 .pure-table thead {
     background-color: #e0e0e0;
     color: #000;
@@ -65,7 +65,7 @@ striping:
 
 /* nth-child selector for modern browsers */
 
-/*单数子元素样式*/
+/*单数行样式 条纹样式*/
 .pure-table-striped tr:nth-child(2n-1) td {
     background-color: #f2f2f2;
 }

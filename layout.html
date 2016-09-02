@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="author" content="wos">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#e1652f">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>布局实验</title>
-  <!-- <script type="text/javascript" src="src/layout.css"></script> -->
   <link rel="stylesheet" href="/src/layout.css">
   <style>
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     .box{
       margin-left: auto;
       margin-right: auto;
@@ -26,6 +33,8 @@
       /*width: 100px;*/
       height: 60px;
       background-color: #eee;
+      text-align: center;
+      line-height: 60px;
     }
     .sty2{
       width: 100px;
@@ -36,25 +45,52 @@
   </style>
 </head>
 <body>
+  <span class="sty" style="margin-bottom:20px;">配合这个< meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />使用</span>
+  <p>平均分布</p>
+<div class="box lh-box lh-box-main-end lh-box-sm-anti-filled lh-box-display-right ">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+  <p>平均分布</p>
+<div class="box lh-box lh-box-main-around lh-box-sm-anti-filled">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+  <p>主轴左右对齐</p>
+<div class="box lh-box lh-box-main-justify lh-box-sm-anti-filled">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
+  <p>子元素右侧顺序</p>
+<div class="box lh-box lh-box-display-reverse lh-box-sm-anti-filled">
+  <span class="sty  lh-item-2-5">1</span>
+  <span class="sty  lh-item-1-5">2</span>
+</div>
   <p>主轴右对齐</p>
-<div class="box lh-box lh-box-display-right">
+<div class="box lh-box lh-box-main-end lh-box-sm-anti-filled">
   <span class="sty  lh-item-2-5">1</span>
   <span class="sty  lh-item-1-5">2</span>
 </div>
   <p>主轴左对齐</p>
-<div class="box lh-box lh-box-main-left ">
+<div class="box lh-box lh-box-main-left lh-box-sm-anti-filled">
   <span class="sty  lh-item-2-5">1</span>
   <span class="sty  lh-item-1-5">2</span>
 </div>
   <p>主轴居中对齐，小于1024从上到下排列</p>
-<div class="box lh-box lh-box-main-center lh-box-lg-filled">
+<div class="box lh-box lh-box-main-center lh-box-lg-filled ">
   <span class="sty  lh-item-2-5">1</span>
   <span class="sty  lh-item-1-5">2</span>
 </div>
+
 <p>主轴居中对齐，小于1024从下到上排列</p>
 <div class="box lh-box lh-box-main-center lh-box-lg-anti lh-box-lg-anti-filled">
   <span class="sty  lh-item-1-5">1</span>
   <span class="sty  lh-item-2-5">2</span>
+</div>
+<p>主轴左右对齐，小于1024从上到下排列</p>
+<div class="box lh-box lh-box-main-center lh-box-lg-filled lh-box-main-justify">
+<span class="sty  lh-item-2-5">1</span>
+<span class="sty  lh-item-1-5">2</span>
 </div>
 <p>主轴居中对齐，小于1024隐藏</p>
 <div class="box lh-box lh-box-main-center lh-box-lg-filled">
@@ -66,7 +102,7 @@
 <span class="sty  lh-item-1-5">1</span>
 <span class="sty  lh-item-2-5 lh-lg-hide" style="display:none;">2</span>
 </div>
-<p>主轴居中对齐，单个元素次序</p>
+<p>主轴居中对齐，单个元素次序,小于1024显示</p>
 <div class="box lh-box lh-box-main-center ">
 <span class="sty  lh-item-1-5 lh-item-order-1-lg">1</span>
 <span class="sty  lh-item-2-5">2</span>
