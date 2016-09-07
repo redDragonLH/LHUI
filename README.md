@@ -1,5 +1,5 @@
 #自制自用UI
-##参考雅虎的 preucss做的
+##参考雅虎的 purecss做的
 第一步是看preucss......
 preucss有很多不认识的属性与写的方式，很惆怅  
 我也要将Nomalize作为基础样式
