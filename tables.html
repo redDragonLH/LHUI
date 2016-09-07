@@ -12,17 +12,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>表格</title>
   <link rel="stylesheet" href="/src/initial.css">
-  <link rel="stylesheet" href="/src/table.css">
+  <link rel="stylesheet" href="/src/tables.css">
+  <link rel="stylesheet" href="/purecss/tables.css">
+  <style media="screen">
+    table{
+      margin:0 auto;
+    }
+  </style>
 </head>
 <body>
-<table summary="这个据说很重要" >
+<table summary="这个据说很重要" class="lh-table">
   <caption>标题</caption>
   <thead>
-    <th>thead 的 th</th>
+    <th>thead 的 th 6666</th>
     <th>thead 的 th</th>
   </thead>
   <tfoot>
     <tr><th>尾部</th></tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <th>一</th>
+      <th>二</th>
+    </tr>
+  </tbody>
+</table>
+<table summary="这个据说很重要" class="pure-table">
+  <caption>标题</caption>
+  <thead>
+    <th>thead 的 th 6666</th>
+    <th>thead 的 th</th>
+  </thead>
+  <tfoot>
+    <tr><th>尾部</th><th>尾部二</th></tr>
   </tfoot>
   <tbody>
     <tr>
