@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>runOnce</title>
+  <title>队列方法</title>
 </head>
 <body>
 
@@ -10,8 +10,14 @@
 <!-- <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script> -->
 <script type="text/javascript" src='queue.js'></script>
 <script type="text/javascript">
-
-var onequeue = new Queue()
-console.log(onequeue.isEmpty())
+var towqueue = new Queue()
+towqueue.enqueue(1)
+towqueue.enqueue(2)
+towqueue.print()
+var onequeue = new PriorityQueue()
+onequeue.enqueue(1,1)
+onequeue.enqueue(2,2)
+onequeue.print()
+// console.log(onequeue.print())
 </script>
 </html>
