@@ -35,7 +35,7 @@
               node.next = current;  //把node放到head位置上
               head = node;
             }else{
-              while(index++ < position){//找到目标位置 
+              while(index++ < position){//找到目标位置
                 previous = current;
                 current = current.next;
               }
@@ -72,22 +72,51 @@
           }
         },
         this.remove = function(element){ //从列表中移除一项
-
+          var index = this.indexOf(element); //获取索引
+          return this.removeAt(index);  //删除这个元素
         },
         this.indexOf = function(element){  //返回元素在列表中的索引。如果列表中没有该元素则返回 -1
-
+          var current = head,
+              index = -1;
+          while(current){
+            index++;
+            if(element === current.element){
+              return index;
+            }
+            current = current.next;
+          }
+          return -1;
         },
         this.isEmpty = function(){  //查看列表中是否有元素，没有返回itrue，有返回false
-
+          return length === 0;
         },
         this.size = function(){  //返回链表包含的元素个数
-
+          return length;
         },
         this.toString = function(){  //由于使用node类，就需要重写继承自javascript对象默认的toString方法，让其只输出元素的值
-
+        //把Linkeblist对象转换成一个字符串
+        var current = head,
+            string = [];
+            while(current){
+              string += current.element;
+              current = current.next;
+            }
+            return string;
+        },
+        this.getHead = function(){ //获取第一个元素
+          //
+          return head;
         },
         this.print = function(){
-
+          //把Linkeblist所有元素放到数组里打印出来
+          var current = head,
+              string = [];
+              while(current){
+                string.push(current.element);
+                current = current.next;
+              }
+              console.log(string)
+              return string;
         }
   };
 })(window);
