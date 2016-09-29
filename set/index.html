@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>集合</title>
+</head>
+<body>
+
+</body>
+<!-- <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script> -->
+<script type="text/javascript" src='set.js'></script>
+<script type="text/javascript">
+ var oneset = new Set();
+ oneset.add(7);
+ oneset.add(11);
+
+ var twoset = new Set();
+ twoset.add(7);
+ twoset.add(11);
+ twoset.add('set')
+ var unionOT = oneset.union(twoset);
+ unionOT.values()
+ var  intersectionOT= oneset.intersection(twoset)
+ intersectionOT.values();
+ var differenceOT = oneset.difference(twoset)
+ differenceOT.values();
+ var subsetOT = oneset.subset(twoset)
+ console.log(subsetOT)
+</script>
+</html>
