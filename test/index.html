@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  function stringy(size) {
+// your code here
+if(typeof size == 'number'){
+  size = size;
+
+}else{
+   size = size.length;
+}
+
+var a='';
+var dou = 0;
+for(var i = 0;i<size;i++){
+
+  if(dou == 0){
+    a += 1;
+    dou = 1;
+
+  }else if(dou == 1){
+    a += 0;
+    dou = 0;
+  }
+
+
+}
+console.log(a.toString())
+return a.toString();
+}
+stringy(10)
+
+
+
+  </script>
+</body>
+</html>
