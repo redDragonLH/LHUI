@@ -6,22 +6,28 @@
 </head>
 <body>
   <script type="text/javascript">
+
     function persistence(num) {
-      var num = num;
-       function diao(num){
+      function diao(num){
+        if(num<10){
+          return 0
+        }
         var nums = String(num).split('');
         var s=1;
         for(var i=0;i< nums.length;i++){
           s = s * Number(nums[i])
         }
-        if(s>9){
+        if(s>=10){
           diao(s)
         }else{
           return s;
         }
+
       }
+      var aa = diao(num);
+      return aa;
     }
-    console.log(persistence(222))
+    console.log(persistence(25))
   </script>
   <!-- <script type="text/javascript">
   function add(n){
