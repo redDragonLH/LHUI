@@ -6,6 +6,97 @@
 </head>
 <body>
   <script type="text/javascript">
+    function persistence(num) {
+      var num = num;
+       function diao(num){
+        var nums = String(num).split('');
+        var s=1;
+        for(var i=0;i< nums.length;i++){
+          s = s * Number(nums[i])
+        }
+        if(s>9){
+          diao(s)
+        }else{
+          return s;
+        }
+      }
+    }
+    console.log(persistence(222))
+  </script>
+  <!-- <script type="text/javascript">
+  function add(n){
+    var num = n;
+    fun = function(y){
+      num =y+num;
+      return fun;
+    }
+    fun.toString=function(){
+      return num;
+    }
+    return fun;
+  }
+  var a = add(2)
+console.log(a+3)
+// 正确
+function add(x) {
+    function helper(y, x) {
+        var sum = y + x;
+        var f = helper.bind(null, sum); // 使用sum值作为新函数的第一个参数
+
+        f.valueOf = function () {
+            return sum;
+        };
+
+        f.toString = function(){
+        	return sum;
+        }
+        return f;
+    }
+    return helper(x, 0);
+}
+console.log(+add(10)(4)); // +运算操作时使用valueOf方法
+  </script> -->
+  <!-- <script type="text/javascript">
+    // 判断数字是否素数
+    function divisors(integer) {
+      if(typeof integer != 'number'){
+        return false;
+      }else if(integer < 2){
+        return integer+" is prime";
+      }
+      var a=[];
+      for(var i = 2;i<integer;i++){
+        if(integer % i == 0 ){
+          a.push(i)
+        }
+      }
+      if(a.length <= 1){
+        return integer+" is prime";
+      }else{
+
+        return a;
+      }
+    };
+    divisors(13)
+  </script> -->
+  <!-- <script type="text/javascript">
+  function likes(names) {
+    if(names.length == 0){
+      return 'no one likes this';
+    }if(names.length == 1){
+      return names[0]+" likes this";
+    }if(names.length == 2){
+      return names[0]+"and"+ names[1]+"likes this";
+    }if(names.length == 3){
+      return names[0]+","+names[1]+" and "+names[2]+" like this";
+    }if(names.length > 3){
+      console.log(names[0]+", "+names[1]+" and "+ (names.length-2) +" others like this")
+      return names[0]+", "+names[1]+" and "+ names.length-2 +" others like this"
+    }
+  }
+  likes(['Alex', 'Jacob', 'Mark', 'Max'])
+  </script> -->
+  <!-- <script type="text/javascript">
   function createPhoneNumber(numbers){
     if(numbers.length>10){
       return false;
@@ -24,7 +115,7 @@
     return a
   }
   createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
-  </script>
+  </script> -->
   <!-- <script>
   // 找错误
     function printerError(s) {
