@@ -2,41 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>测试</title>
 </head>
 <body>
   <script type="text/javascript">
-  function stringy(size) {
-// your code here
-if(typeof size == 'number'){
-  size = size;
-
-}else{
-   size = size.length;
-}
-
-var a='';
-var dou = 0;
-for(var i = 0;i<size;i++){
-
-  if(dou == 0){
-    a += 1;
-    dou = 1;
-
-  }else if(dou == 1){
-    a += 0;
-    dou = 0;
+  function createPhoneNumber(numbers){
+    if(numbers.length>10){
+      return false;
+    }
+    var a = '';
+    for(var i = 0;i<numbers.length;i++){
+      if(i == 0){
+        a = '('+numbers[i]+numbers[i+1]+numbers[i+2]+') ';
+      }else if(i == 3){
+        a= a+numbers[i]+numbers[i+1]+numbers[i+2]+'-';
+      }else if(i>5){
+        a+=numbers[i]
+      }
+    }
+    console.log(a)
+    return a
   }
-
-
-}
-console.log(a.toString())
-return a.toString();
-}
-stringy(10)
-
-
-
+  createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
   </script>
+  <!-- <script>
+  // 找错误
+    function printerError(s) {
+      // your code
+
+      var err= ['x','y','w','z','v','u','t','s','r','q','p','o','n']
+      var s= String(s).split('');
+      var z=0;
+
+      for(var i=0;i<s.length;i++){
+        for(var n=0;n<err.length;n++){
+          if(s[i]==err[n]){
+            z=z+1;
+          }
+        }
+      }
+      z =String(z);
+      var num = String(s.length)
+
+      return (z+'/'+num)
+    }
+    printerError('sdgxxyyw')
+  </script> -->
+  <!-- <script type="text/javascript">
+    // .....替换
+    function accum(s) {
+      if(typeof s != 'string'){
+        return false;
+      }
+      s = s.toLocaleUpperCase();
+      var num = String(s).split('');
+      var num2 = [];
+      for(var i = 0;i<num.length;i++){
+        num2.push(num[i]+compute(num[i],i))
+      }
+      function compute(a,b){
+        if(b==0){
+          return '';
+        }
+        var xa = a.toLowerCase();
+        var ts ='';
+        for(var a=0;a<b;a++){
+          ts+=xa;
+        }
+        return ts
+      }
+      num2=String(num2)
+      num2 = num2.replace(/,/g,"-")
+        console.log(num2)
+    }
+    accum('asda')
+
+  </script> -->
+<!-- <script type="text/javascript">
+//字母替换
+function test(text){
+  var num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26],
+      letter = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  text = text.toLowerCase();
+  text = String(text).split('');
+  var num2 =[]
+  for(var i = 0;i<text.length;i++){
+    for(var c=0;c<letter.length;c++){
+      if(text[i] == letter[c]){
+        num2.push(num[c])
+      }
+    }
+  }
+  var num3='';
+  for(var a = 0;a<num2.length;a++){
+    if(a ==num2.length ){
+      num3 +=num2[a];
+    }else{
+      num3+=num2[a]+' ';
+    }
+  }
+  console.log(num3)
+  return num3
+}
+test('s')
+</script> -->
+  <!-- <script>
+  //整数排序
+  function descendingOrder(n){
+    //...
+    if(typeof n != 'number'){
+      return false;
+    }
+    n = String(n);
+    var q = String(n).split('');
+
+     function sortArr(m,n){
+         return m>n?1:(m<n?-1:0);
+     }
+     q.sort(sortArr).reverse();
+     var a ='';
+
+     for(var s = 0;s<q.length;s++){
+       a += q[s]
+
+     }
+
+     a= Number(a)
+     console.log(a)
+     return a
+  }
+  descendingOrder(0)
+  </script> -->
+
+  <!-- <script type="text/javascript">
+  function descendingOrder(n){
+    //...
+    if(typeof n != 'number'){
+      return false;
+    }
+    n = String(n);
+    var q =[];
+    for(var i = 0;i<n.length;i++){
+        q.push(n.substring(n,n+1));
+          console.log(q)
+    }
+
+  }
+  var i="2135435";
+   q = String(i).split('');
+
+   function sortArr(m,n){
+       return m>n?1:(m<n?-1:0);
+   }
+   q.sort(sortArr).reverse();
+console.log(q)
+  </script> -->
+
 </body>
 </html>
