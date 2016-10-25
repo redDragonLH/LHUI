@@ -5,10 +5,35 @@
   <title>测试</title>
 </head>
 <body>
-  <script type="text/javascript">
-
-    function persistence(num) {
-      function diao(num){
+  <!-- <script type="text/javascript">
+  var breakChocolate = function(n, m) {
+    var a = n*m-1?n*m-1:0;
+    return a<0?0:a
+  };
+  breakChocolate(0,0)
+  </script> -->
+  <!-- <script type="text/javascript">
+  function collatz(n, count) {
+    var count = count||0
+    if (n <= 1) return count;
+    n = (n % 2 == 0) ? n / 2 : n * 3 + 1;
+    collatz(n, count + 1);
+  }
+  collatz(2)
+  </script> -->
+  <!-- <script type="text/javascript">
+  var isSquare = function(n){
+    var aaa = Math.sqrt(n);
+    var cc= aaa % 1 == 0 ?  true : false;
+  return cc
+  }
+   isSquare(20)
+  </script> -->
+  <!-- <script type="text/javascript">
+    //计算
+    function persistence(num,n){
+      var aaa = n||0
+          aaa += 1
         if(num<10){
           return 0
         }
@@ -18,17 +43,13 @@
           s = s * Number(nums[i])
         }
         if(s>=10){
-          diao(s)
+          return persistence(s,aaa)
         }else{
-          return s;
+          return aaa;
         }
-
-      }
-      var aa = diao(num);
-      return aa;
     }
-    console.log(persistence(25))
-  </script>
+    console.log(persistence(39))
+  </script> -->
   <!-- <script type="text/javascript">
   function add(n){
     var num = n;

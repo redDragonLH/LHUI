@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+<style>
+  #fluid_container{
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+<canvas id="fluid_container"></canvas>
+</body>
+  <script type="text/javascript" src="fluid_effect.js"></script>
+  <script type="text/javascript">
+  require(['main']);
+  </script>
+  <script type="text/javascript">
+  window.FluidEffect.init();
+  window.FluidEffect.start();
+  </script>
+  <!-- <script type="text/javascript" src="directives.js"></script> -->
+  <!-- <script type="text/javascript" src="services.js"></script>
+  <script type="text/javascript" src="filters.js"></script> -->
+  <!-- <script type="text/javascript" src="animations.js"></script> -->
+</html>
