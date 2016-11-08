@@ -5,6 +5,92 @@
   <title>测试</title>
 </head>
 <body>
+  <script type="text/javascript">
+  function humanReadable(seconds) {
+    if(seconds < 360000){
+      return num(seconds)
+    }else{
+      return false;
+    }
+    function num(seconds){
+      var SS = seconds % 60;
+      var SS_yu = Math.floor(seconds / 60)>1 ?Math.floor(seconds / 60):00;
+      var MM = SS_yu % 60;
+      var MM_yu = Math.floor(SS_yu / 60)>1?Math.floor(SS_yu / 60):00;
+      var HH = MM_yu % 100;
+      console.log(HH+':'+MM+':'+SS)
+      return HH+':'+MM+':'+SS;
+    }
+  }
+humanReadable(359999)
+  </script>
+  <!-- <script type="text/javascript">
+  function pigIt(str){
+    //Code here
+    var s= String(str).split(' '),
+        a=0,
+        b,
+        c,e='';
+    for(;a<s.length;a++){
+        b = s[a].substr(0,1);
+        c = s[a].substr(1);
+        var d = c+b+"ay";
+      if(a == s.length-1){
+        console.log(s.length)
+        e+=d;
+      }
+        e+=d+' ';
+    }
+    return e
+  }
+  pigIt('Pig latin is cool')
+  </script> -->
+  <!-- <script type="text/javascript">
+  function trickOrTreat(children,candies){
+  //coding and coding..
+  var can = candies,
+      chi = children,
+      c =[],
+      gtext ="Thank you, strange uncle!",
+      notext = "Trick or treat!";
+    for(var i= 0;i<children;i++){
+      if(can[i] ==""){
+        return "Trick or treat!";
+      }else{
+        c[i] = centent(can[i])
+      }
+    }
+    function centent(cani){
+      var b =0
+
+      if(cani == undefined){
+        return 'bomb';
+      }
+      for(var a = 0;a<cani.length;a++){
+          if(cani[a] == 'candy'){
+            b++
+          }else if(cani[a] == 'bomb'){
+            return 'bomb'
+          }
+      }
+        if(b<2){
+          return 'bomb'
+        }
+      return b
+    }
+
+    for(var d=1;d<c.length;d++){
+      if(c[d-1] == c[d]){
+        console.log( c[d])
+      }else{
+          console.log(c[d-1])
+        return notext;
+      }
+    }
+    return gtext
+  }
+trickOrTreat(11,[["cat","money","candy","cat","candy","candy","candy","beer"],["baby","dog","candy","candy","beer","apple","paper","phone","candy","keys","candy"],["dog","candy","candy","candy","myjinxin","candy","stone","baby","apple","money"],["phone","candy","money","candy","beer","keys","apple","cat","candy","candy","baby"],["myjinxin","candy","candy","keys","beer","candy","candy","beer"],["candy","candy","candy","candy"],["candy","candy","candy","candy"],["candy","candy","phone","phone","candy","candy","paper","money"]])
+  </script> -->
   <!-- <script type="text/javascript">
   var breakChocolate = function(n, m) {
     var a = n*m-1?n*m-1:0;
