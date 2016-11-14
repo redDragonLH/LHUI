@@ -1,0 +1,306 @@
+/*公共样式*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, input, textarea, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header
+, menu, nav, section, menu, time, mark, audio, video {  margin: 0;  padding: 0;  }
+img{
+    border: none;
+}
+ul,li{
+    list-style: none;
+}
+html{
+	width: 100%;
+	overflow-x: hidden;
+}
+body{
+	width: 100%;
+	overflow-y :auto;
+	overflow-x: hidden;
+	font-family:"微软雅黑","Arial Narrow",HELVETICA;
+    color:#333;
+    background-color: #ffffff;
+}
+a{
+    text-decoration: none;
+}
+.left,.fl{
+	float: left;
+}
+.right,.fr{
+	float: right;
+}
+.over{
+	overflow: hidden;
+}
+.middle{
+	vertical-align: middle;
+}    
+.hide{
+	display: none;
+}
+.cursor{
+	cursor: pointer;
+}
+/*页头*/
+.header{
+	width: 100%;
+	background-color: #2d2d2d;
+	height: 30px;
+	font-size: 12px;
+	color: #d0d0d0;
+}
+.width{
+	width: 1000px;
+	margin: 0 auto;
+}
+.log-reg-ul{
+	/*width: 1000px;
+	margin: 0 auto;*/
+	float: right;
+	/*margin-right: 30px;*/
+	
+}
+.log-reg-ul li{
+	float: left;
+	line-height: 30px;
+}
+.log-reg-ul li a{
+	color: #d0d0d0;
+}
+.log-reg-ul li .pad{
+	padding: 0 10px;
+    color: #ccc;
+}
+.menu{
+	height: 74px;
+	/*line-height: 74px;*/
+	border-bottom: 2px solid #cc0000;
+}
+.martop{
+	margin-top: 9px;display: block;
+}
+.menubox{
+	/*font-size: 14px;*/
+}
+.menubox .li{
+	float: left;width: 108px;
+	position: relative;
+}
+.menubox .li .linea{
+	display: block;
+	width: 80px;
+	text-align: center;
+	color: #333;font-size: 15px;
+    display: block;
+    margin-top: 30px;
+    padding-bottom: 22px;
+    font-weight: bold;
+}
+.menubox .li .here{
+	color: #cc0000;
+	border-bottom: 2px solid #cc0000;
+}
+.menubox .li:hover .linea{
+	color: #cc0000;
+	border-bottom: 2px solid #cc0000;
+}
+.menubox .li .amenu{
+	position: absolute;
+	/*background-color: #D0D0D0;*/
+	background-color:rgba(255,255,255,0.5);
+	filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  
+    -khtml-opacity: 0.5;  
+    opacity: 0.5; 
+    opacity: .5;
+	width: 120px;
+	/*padding: 0 20px;*/
+	padding-top: 1px;
+	margin-left: -23px;
+	border-radius: 2px;
+	top: 74px;left: 4px;
+	z-index: 9999999;
+}
+.amenu li{
+	font-size: 15px;
+	text-align: center;
+	line-height: 32px;
+	/*居左对齐情况*/
+	/*text-align: left;
+    padding-left: 30px;*/
+}
+.amenu li a{
+	color: #111;font-weight: bold;
+}
+/*.amenu li a:hover{
+	color: #cc0000;font-weight: bold;
+}*/
+.amenu li:hover{
+	background-color: #cc0000;font-weight: bold;
+}
+/*页脚*/
+.footer{
+	padding: 36px 0 54px;font-weight: bold;
+}
+.foot-left .HQ{
+	font-size: 20px;color: #cc0033;margin-bottom: 18px;
+	text-align: left;
+}
+.foot-left .detail{
+	font-size: 13px;color: #666;
+	text-align: left;
+}
+.foot-left .detaila{
+	margin-bottom: 8px;
+}
+.foot-left .detailb{
+	margin-bottom: 18px;
+}
+.foot-left .footul li{
+	float: left;margin-right: 24px;
+}
+.foot-left .footul li a{
+	color: #333;font-size: 15px;
+}
+.footer .autoC{
+	font-size: 13px;
+    color: #333;
+    text-align: center;
+    clear: both;
+    padding-top: 36px;
+}
+.foot-right{
+	margin-top: 14px;
+}
+.footer .tel{
+	font-size: 22px;color: #cc0033;
+}
+.footer .wechat{
+	margin-right: 12px;
+}
+.footer .webo{
+	font-size: 15px;color: #333;
+}
+.footer .weboa{
+	margin-bottom: 5px;
+}
+.footer .webob{
+	margin-bottom: 10px;
+}
+#back{
+	position: fixed;
+    bottom: 150px;
+    right: 8%;
+    display: none;
+    cursor: point;
+    border-radius: 5px;
+}
+.share-icon-list{
+	/*display: none;*/
+	overflow: hidden;
+	position: absolute;top: 40px;
+	right: 16%;z-index: 9999999999;
+	/*width: 36px;height: 100px;*/
+	width: 40px;
+	background-color: rgba(126,206,244,0.7);
+	filter:alpha(opacity=70);  
+    -moz-opacity:0.7;  
+    -khtml-opacity: 0.7;  
+    opacity: 0.7; 
+    opacity: .7;
+    border-radius: 5px;
+}
+#email{
+	display: block;
+	background: url(../images/youxiang.png) no-repeat;
+	width: 20px;height: 15px;
+	margin: 15px auto; 
+	float: none;
+	padding-left: 0px;
+}
+#xl{
+	display: block;
+	background: url(../images/weibo.png) no-repeat;
+	width: 22px;height: 17px;
+	margin: 15px auto;
+	float: none;
+	padding-left: 0px;
+}
+#tx{
+	display: block;
+	background: url(../images/weixin.png) no-repeat;
+	width: 27px;height: 20px;
+	margin: 15px auto;
+	float: none;
+	padding-left: 0px;
+}
+.sr-bdimgshare .bdimgshare-content {
+	display: none;
+}
+.bdimgshare-bg{
+	display: none;
+}
+.swiper-container {
+    width: 999px;
+    height: 400px;
+    margin: 5px auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/*.swiper-slide{
+	margin-right: 2px;
+}*/
+.swiper-slide a{
+	display: block;width: 333px;height: 400px;
+}
+.swiper-slide a img{
+	display: block;width: 331px;height: 400px;
+}
+
+@media screen and (max-width: 1100px){
+	.martop{
+		margin-left: 12px;
+	}
+	.log-reg-ul{
+		margin-right: 30px;
+	}
+	.share-icon-list{
+		right: 10%;
+	}
+	.foot-left{
+		margin-left: 20px;
+	}
+	.foot-right{
+		margin-right: 30px;
+	}
+	.swiper-button-next{
+		right: 30px;
+	}
+	.width{
+		width: auto;	
+		margin: 0 auto;
+	}
+}
+/*@media (min-width: 500px) and (max-width: 800px){
+	
+  
+
+}*/
+
+

@@ -1,0 +1,110 @@
+.ad_content{
+	background-color: #EDF1F2;
+}
+.back-img{
+	/*background: rgba(0,0,0,.5);
+	filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  
+    -khtml-opacity: 0.5;  
+    opacity: 0.5; 
+    opacity: .5;*/
+    width: 100%;height: 100%;z-index: 999;position: absolute;top: 0;left: 0;background: rgba(0,0,0,.5);
+}
+.back-img h3{
+	font-size: 15px;color: #fff;margin: 55px 0 5px 0;text-align: center;
+}
+.back-img h4{
+	font-size: 15px;color: #fff;text-align: center;
+}
+.three_ad li{
+	float: left;height: 150px;position: relative;width: 332px;
+}
+.three_ad li:nth-child(2){
+	margin: 0 2px;
+}
+.three_ad li img{
+	width: 100%;height: 100%;
+}
+.three_ad li p{
+	color: #fff;font-size: 18px;margin-left: 15px;
+	/*position: absolute;bottom: 7px;left: 17px;*/
+}
+.ad_title{
+	font-size: 20px;color: #cc0000;margin: 32px 42px 32px;
+}
+.marul{
+	height: 100px;background-color: salmon; 
+}
+.marli{
+	margin: 0 42px 28px;height: 100px; 
+	/*background-color: #A4AEB9;*/
+}
+.leftimg{
+	width: 140px;height: 100px;margin-right: 15px;
+}
+.width_ad{
+	width: 1000px;
+	margin: 0 auto;
+}
+.centercont{
+	/*width: 88%;*/
+	border-right: 3px solid #cc0000;
+	height: 100px;
+	/*border-radius: 3px;*/
+	margin-right: 20px;
+}
+.tit_h{
+	font-size: 16px;color: #cc0000;
+	margin-right: 10px;
+}
+.omit{
+	font-size: 13px;
+	margin: 20px 15px 0 0;
+	word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 3; /** 显示的行数 **/
+    overflow: hidden;  /** 隐藏超出的内容 **/
+    max-height: 50px;
+} 
+.p_font{
+	font-size: 13px;color: #666;text-align: left;
+	margin-bottom: 5px;
+}  
+.p_font:nth-child(1){
+	margin-top: 8px;
+}
+.div_margin{
+	width: 85%;
+	margin: 10px 0 15px;
+} 
+.news_top{
+	width: 90%;
+}
+.news_bottom{
+	width: 10%;
+}
+.col_p{
+	font-size: 13px;color: #cc0000;
+}
+.col_img{
+	margin: 5px 10px 0 0;
+}
+.img100{
+	width: 100%;
+	height: 345px;
+}
+.media_life {
+	margin: 7px auto 0;
+}
+.media_class{
+	margin: 7px auto 0;
+}
+.bg{
+	background: url(../images/bg.gif) repeat fixed top;
+}
+
+
+
+  

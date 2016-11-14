@@ -1,0 +1,233 @@
+.fl {float: left;_display: inline;}
+.fr { float: right; _display: inline;}
+.clearfix{ *zoom:1;}
+.clearfix:after{ display:block; clear:both; content:"";}
+.main-content .main-page {
+  margin-left: 0;
+  padding: 30px 40px 0 35px;
+}
+.panel {
+  border: 1px solid #e2e8eb;
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.panel .panel-head {
+  min-height: 55px;
+  line-height: 55px;
+  padding-left: 25px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e2e8eb;
+}
+.panel .panel-body {
+  padding: 25px 20px;
+  background-color: #ffffff;
+}
+.search-area, .filter-area {
+  padding:0 0 25px 0;
+}
+
+#activityName {
+  width: 128px;
+  height: 22px;
+  border: 1px solid #cfdde8;
+  border-radius: 5px;
+}
+.search-btn{
+	/*background: url("images/sbtn.png") no-repeat 12px center #a5afb5;*/
+	width: 77px;
+	
+	text-indent: 30px;
+	height: 24px;
+	border: none;
+	
+	border-radius: 3px;
+	margin-left: 50px;
+}
+.data-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+.data-table tr th {
+  text-align: center;
+}
+.data-table th {
+  background-color: #a4aeb9;
+  color: #FFF;
+}
+.data-table th {
+  line-height: 34px;
+  height: 34px;
+  font-weight: normal;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+}
+.data-table td {
+  color: #333333;
+  min-height: 53px;
+}
+.data-table td {
+  text-align: center;
+  line-height: 53px;
+  min-height: 53px;
+  height: 53px;
+  font-size: 14px;
+  font-weight: normal;
+  border: none;
+  border-spacing: 0;
+}
+.data-table td a {
+  line-height: 53px;
+  
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+}
+
+.data-table td.title {
+  width: 150px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-table td.start-point {
+  width: 84px;
+  max-width: 84px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-table.table-striped tbody tr:nth-child(even) {
+  background-color: #f6f8fa;
+}
+
+.data-table.table-striped tbody tr:nth-child(even):hover {
+  background-color: #e6ebf1;
+}
+
+.data-table.table-striped tbody tr:nth-child(odd) {
+  background-color: #FFF;
+}
+
+.data-table.table-striped tbody tr:nth-child(odd):hover {
+  background-color: #f2f2f2;
+}
+
+.data-table th {
+  background-color: #a4aeb9;
+  color: #FFF;
+  position: relative;
+}
+.data-table th img{
+  margin-left: 5px;
+}
+
+.data-table td {
+  color: #333333;
+  min-height: 53px;
+}
+
+.data-table td.disabled {
+  color: #999999;
+}
+
+.data-table td.error {
+  color: #df4f72;
+}
+
+.data-table td.action {
+  font-size: 0;
+}
+
+.data-table td.action a {
+  display: inline-block;
+  font-size: 14px;
+  color: #df4f72;
+  text-decoration: underline;
+  margin: 0 10px;
+  line-height: inherit;
+  vertical-align: middle;
+}
+
+.data-table td.action a:hover {
+  color: #d42751;
+}
+
+.data-table td.text-overflow {
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-bottom{
+	margin: 17px auto 15px auto;
+}
+.jump-btn{
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #e5e6e7;
+	width: 56px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	margin:0 20px 0 10px;
+	border-radius: 6px;
+	background-color: #fff;
+}
+.jump-inp input{
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #e5e6e7;
+	width: 56px;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 6px;
+	margin-left: 10px;
+}
+.search-totle{
+	height: 28px;
+	line-height: 28px;
+	margin:0 10px;
+}
+.bmmc{
+	float: left;
+	line-height: 24px;
+	padding: 0 17px 0 7px;
+}
+.bm-inp{
+	float: left;
+}
+.search-btn{
+	float: left;
+	width: 77px;
+	height: 24px;
+	cursor: pointer;
+}
+.rs-float{
+	position: absolute;
+	top: -66px;
+	width: 295px;
+	padding:8px;
+	color: #1715f9;
+	font-size: 14px;
+	background: #ffe9b1;
+	border-radius: 5px;
+	text-align: left;
+	line-height: 24px;
+	left: -50px;
+	z-index: 3;
+	display: none;
+}
+.rs-arr{
+	position: absolute;
+	left: 180px;
+	bottom:-14px;
+}
