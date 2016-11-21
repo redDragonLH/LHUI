@@ -20,27 +20,26 @@ $(function(){
 			$("ctrl_bg").removeClass("bg");
 		}
 	})
-/*	
-	function goAjax(paramObj,urlStr,callback,type){
-		
-		if(type == undefined){
-			type = "json";
-		}
-		$.ajax({
-			url: urlStr,
-	        type: "POST",
-	        jsonp: "callback",
-	        dataType: type,
-	        async: false,
-	        data: paramObj,
-		})
-		.done(function(res) {
-			callback(res)
-		})
-		.fail(function() {
-			alery("数据出现问题!");
-		})
+	for(var i = 0;i<5;i++){
+		var html = '<li class="marli"><a style="color: #333;" href="http://www.baidu.com">'+
+				'<div class="news_top fl over">'+
+					'<img class="leftimg fl" src="../images/wechat.png" alt="" />'+
+					'<div class="centercont">'+
+						'<h4 class="tit_h">高铁巨大的场聚效应，成为品牌营销的理想入口</h4>'+
+						'<p class="omit">华铁传媒独家垄断上海铁路局所辖全部高铁动车组媒体代理运营权，囊括包括京沪、沪宁高铁、沪杭高铁、宁杭甬高铁、沿海(沪深)客运专线、沪广高铁、沪汉蓉客运专线、沪昆高铁、徐兰高铁、合福高铁以及华东的宁启、宁安、金丽温等客运专线资源，在纵横交错的高铁主干线上形成最强经济实力的黄金网络布局。不仅如此，华铁传媒独家代理成都铁路局沪汉蓉全线资源，及以成都、重庆为中心，辐射至上海、北京、广州、南京、杭州、宁波等华东沿海城市的全线直达高铁动车组线路资源，完成了高铁媒体线路资源版图中西南地区的战略部署，全面布局国家长江经济带发展规划区域，并与国家长江经济带战略形成同步。</p>'+
+					'</div>'+
+				'</div>'+
+				'<div class="news_bottom fr">'+
+					'<p class="p_font">发布时间：</p>'+
+					'<p class="p_font">2016-07-24</p>'+
+					'<p class="p_font">10:00:00</p>'+
+					'<div class="over div_margin"><img class="fl col_img" src="../images/mark.gif" alt="" /><p class="fl col_p">焦点新闻</p></div>'+
+				'</div>'+
+			'</a></li>';
+    	$(".ulnews").append(html);
 	}
+	
+/*	
 //接口地址
 	var msg_add = iwetuan_add+"/api/club/SpecialsList?club_id="+club_id+"&user_id="+user_id+"&type=1";
 	
@@ -89,20 +88,22 @@ $(function(){
 			$(".search-totle").html(pageNum+'/'+ numTotle)
 			$(".ad_content").html('');
 			for(var i = 0;i<res.data.length;i++){
-	
-				var html = '<tr class="'+k+'" data-did="'+m.id+'">'+
-	              		'<td class="id">'+m.id+'</td>'+
-	              		'<td class="title">'+'<a class="change-btn aac" aac="'+m.url+'" href="'+a1a+'" style="'+laker+'text-decoration:underline;color:#333333;" target="_blank">'+m.title+'</a>'+'</td>'+
-	              		'<td class="show_create_time">'+m.show_create_time+'</td>'+
-	              		'<td class="title">'+
-	              			'<a class="change-btn aad" aad="'+m.edit_url+'" href="'+a2a+'" style="'+color+'text-decoration:underline;" target="_blank">修改</a>'+
-	              		'</td>'+
-						'<td class="action">'+
-	              			'<a class="delok" href="javascript:;" data-id='+m.id+' data-status="'+msfd+'">'+n+'</a>'+
-	              		'</td>'+
-	       
-	              		'</tr>';
-		    		$("#topicListTable tbody").append(html);
+				var html = '<li class="marli">'+
+						'<div class="news_top fl over">'+
+							'<img class="leftimg fl" src="../images/wechat.png" alt="" />'+
+							'<div class="centercont">'+
+								'<h4 class="tit_h">高铁巨大的场聚效应，成为品牌营销的理想入口</h4>'+
+								'<p class="omit">华铁传媒独家垄断上海铁路局所辖全部高铁动车组媒体代理运营权，囊括包括京沪、沪宁高铁、沪杭高铁、宁杭甬高铁、沿海(沪深)客运专线、沪广高铁、沪汉蓉客运专线、沪昆高铁、徐兰高铁、合福高铁以及华东的宁启、宁安、金丽温等客运专线资源，在纵横交错的高铁主干线上形成最强经济实力的黄金网络布局。不仅如此，华铁传媒独家代理成都铁路局沪汉蓉全线资源，及以成都、重庆为中心，辐射至上海、北京、广州、南京、杭州、宁波等华东沿海城市的全线直达高铁动车组线路资源，完成了高铁媒体线路资源版图中西南地区的战略部署，全面布局国家长江经济带发展规划区域，并与国家长江经济带战略形成同步。</p>'+
+							'</div>'+
+						'</div>'+
+						'<div class="news_bottom fr">'+
+							'<p class="p_font">发布时间：</p>'+
+							'<p class="p_font">2016-07-24</p>'+
+							'<p class="p_font">10:00:00</p>'+
+							'<div class="over div_margin"><img class="fl col_img" src="../images/mark.gif" alt="" /><p class="fl col_p">焦点新闻</p></div>'+
+						'</div>'+
+					'</li>';
+		    		$(".ulnews").append(html);
 			}
 			
 		}else if(res.error_code == 10002){
@@ -142,3 +143,22 @@ $(function(){
 	
 */
 })
+function goAjax(paramObj,urlStr,callback,type){
+	if(type == undefined){
+		type = "json";
+	}
+	$.ajax({
+		url: urlStr,
+        type: "POST",
+        jsonp: "callback",
+        dataType: type,
+        async: false,
+        data: paramObj,
+	})
+	.done(function(res) {
+		callback(res)
+	})
+	.fail(function() {
+		alery("数据出现问题!");
+	})
+}

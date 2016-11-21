@@ -4,4 +4,5 @@ $(function(){
 	$(".ph_p_warp").width($(".ph_p_warp li").length*40).css("margin-left",-$(".ph_p_warp li").length*10)
 	
 	//jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3});
+	
 })

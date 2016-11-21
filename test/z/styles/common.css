@@ -49,7 +49,7 @@ a{
 	color: #d0d0d0;
 }
 .width{
-	width: 1000px;
+	width: 960px;
 	margin: 0 auto;
 }
 .log-reg-ul{
@@ -57,7 +57,6 @@ a{
 	margin: 0 auto;*/
 	float: right;
 	/*margin-right: 30px;*/
-	
 }
 .log-reg-ul li{
 	float: left;
@@ -73,7 +72,7 @@ a{
 .menu{
 	height: 74px;
 	/*line-height: 74px;*/
-	border-bottom: 2px solid #cc0000;
+	border-bottom: 3px solid #cc0000;
 }
 .martop{
 	margin-top: 9px;display: block;
@@ -101,7 +100,7 @@ a{
 }
 .menubox .li:hover .linea{
 	color: #cc0000;
-	border-bottom: 2px solid #cc0000;
+	border-bottom: 3px solid #cc0000;
 }
 .menubox .li .amenu{
 	position: absolute;
@@ -139,7 +138,7 @@ a{
 }
 /*页脚*/
 .footer{
-	padding: 36px 0 54px;font-weight: bold;
+	padding: 32px 0 50px;font-weight: bold;
 }
 .foot-left .HQ{
 	font-size: 20px;color: #cc0033;margin-bottom: 18px;
@@ -162,11 +161,12 @@ a{
 	color: #333;font-size: 15px;
 }
 .footer .autoC{
-	font-size: 13px;
+	font-size: 14px;
     color: #333;
     text-align: center;
     clear: both;
     padding-top: 36px;
+    white-space: nowrap;
 }
 .foot-right{
 	margin-top: 14px;
@@ -181,24 +181,25 @@ a{
 	font-size: 15px;color: #333;
 }
 .footer .weboa{
-	margin-bottom: 5px;
+	margin: 2px 0 5px 0;
 }
 .footer .webob{
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
 #back{
 	position: fixed;
     bottom: 150px;
-    right: 8%;
+    right: 20%;
     display: none;
     cursor: point;
     border-radius: 5px;
+    z-index: 99999999;
 }
 .share-icon-list{
-	/*display: none;*/
+	/*position: absolute;top: 40px;
+	right: 20%;*/
 	overflow: hidden;
-	position: absolute;top: 40px;
-	right: 16%;z-index: 9999999999;
+	z-index: 9999999;
 	/*width: 36px;height: 100px;*/
 	width: 40px;
 	background-color: rgba(126,206,244,0.7);
@@ -240,7 +241,7 @@ a{
 	display: none;
 }
 .swiper-container {
-    width: 999px;
+    width: 960px;
     height: 400px;
     margin: 5px auto;
 }
@@ -267,10 +268,10 @@ a{
 	margin-right: 2px;
 }*/
 .swiper-slide a{
-	display: block;width: 333px;height: 400px;
+	display: block;width: 318px;height: 400px;
 }
 .swiper-slide a img{
-	display: block;width: 331px;height: 400px;
+	display: block;width: 317px;height: 400px;
 }
 
 @media screen and (max-width: 1100px){

@@ -28,5 +28,13 @@ $(function(){
 		var title=$(this).data("title");
 		$(".where_rail").text(title);
 	})
+	$(".swiper-button-next,.swiper-button-prev").on("click",function(){
+		$(this).hide("");
+		var $that=$(this)
+		setTimeout(function(){
+			$that.show();
+		},500)
+		
+	})
     
 })

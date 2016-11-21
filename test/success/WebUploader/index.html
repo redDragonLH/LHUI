@@ -6,23 +6,7 @@
 </head>
 <body>
   <script type="text/javascript">
-  function humanReadable(seconds) {
-    if(seconds < 360000){
-      return num(seconds)
-    }else{
-      return false;
-    }
-    function num(seconds){
-      var SS = seconds % 60;
-      var SS_yu = Math.floor(seconds / 60)>1 ?Math.floor(seconds / 60):00;
-      var MM = SS_yu % 60;
-      var MM_yu = Math.floor(SS_yu / 60)>1?Math.floor(SS_yu / 60):00;
-      var HH = MM_yu % 100;
-      console.log(HH+':'+MM+':'+SS)
-      return HH+':'+MM+':'+SS;
-    }
-  }
-humanReadable(359999)
+
   </script>
   <!-- <script type="text/javascript">
   function pigIt(str){

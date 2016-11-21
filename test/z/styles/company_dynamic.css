@@ -17,7 +17,7 @@
 	font-size: 15px;color: #fff;text-align: center;
 }
 .three_ad li{
-	float: left;height: 150px;position: relative;width: 332px;
+	float: left;height: 150px;position: relative;width: 318px;
 }
 .three_ad li:nth-child(2){
 	margin: 0 2px;
@@ -43,8 +43,9 @@
 	width: 140px;height: 100px;margin-right: 15px;
 }
 .width_ad{
-	width: 1000px;
+	width: 960px;
 	margin: 0 auto;
+	position: relative;
 }
 .centercont{
 	/*width: 88%;*/
@@ -102,9 +103,11 @@
 	margin: 7px auto 0;
 }
 .bg{
-	background: url(../images/bg.gif) repeat fixed top;
+	background: url(../images/bgh.png) repeat fixed top;
 }
-
+#share{
+	position: absolute;top: 20px;right: 2px;
+}
 
 
   

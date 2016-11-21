@@ -1,13 +1,15 @@
 .NEWS{
 	background-color: #EDF1F2;position: relative;
-	padding: 0 63px 0 40px;
+	/*padding: 0 63px 0 40px;*/
 }
 .NEWS-L{
-	width: 58%;margin-top: 40px;
+	width: 500px;margin-top: 40px;
+	margin-left: 50px;
 }
 .NEWS-R{
-	margin: 40px 0 0 0;width: 32%;
-	padding-left: 30px;border-left: 3px solid #CC0000;
+	margin: 40px 0 0 0;width: 300px;
+	padding-left: 25px;border-left: 3px solid #CC0000;
+	margin-left: 50px;
 }
 .marg_h{
 	/*margin: 15px auto 30px;*/
@@ -48,7 +50,7 @@
 	margin-top: 2px;
 }
 .newtime{
-	margin: 0 100px 0 5px;
+	margin: 0 60px 0 5px;
 }
 .imgmar{
 	margin: 2px 5px 0 0;
@@ -106,6 +108,9 @@
     overflow: hidden;  /** 隐藏超出的内容 **/
     max-height: 56px;
     margin-bottom: 10px;
+}
+.font16{
+	font-size: 14px;
 }
 .href_news li{
 	margin-bottom: 20px;
