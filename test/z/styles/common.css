@@ -83,41 +83,46 @@ a{
 .menubox .li{
 	float: left;width: 108px;
 	position: relative;
+	/*overflow: hidden;*/
 }
 .menubox .li .linea{
+	float: right;
 	display: block;
 	width: 80px;
 	text-align: center;
 	color: #333;font-size: 15px;
     display: block;
-    margin-top: 30px;
-    padding-bottom: 22px;
+    margin: 30px 0 0 0;
+    /*padding-bottom: 22px;*/
+    padding-bottom: 21px;
     font-weight: bold;
 }
 .menubox .li .here{
 	color: #cc0000;
-	border-bottom: 2px solid #cc0000;
+	/*border-bottom: 2px solid #cc0000;*/
+	border-bottom: 6px solid #cc0000;
 }
 .menubox .li:hover .linea{
 	color: #cc0000;
-	border-bottom: 3px solid #cc0000;
+	border-bottom: 6px solid #cc0000;
 }
 .menubox .li .amenu{
 	position: absolute;
 	/*background-color: #D0D0D0;*/
-	background-color:rgba(255,255,255,0.5);
-	filter:alpha(opacity=50);  
+	background-color: rgba(238,233,233,0.7);
+	/*filter:alpha(opacity=50);  
     -moz-opacity:0.5;  
     -khtml-opacity: 0.5;  
     opacity: 0.5; 
-    opacity: .5;
+    opacity: .5;*/
+   	/*background-color: #000000;*/
 	width: 120px;
 	/*padding: 0 20px;*/
-	padding-top: 1px;
+	/*padding-top: 1px;*/
 	margin-left: -23px;
-	border-radius: 2px;
-	top: 74px;left: 4px;
-	z-index: 9999999;
+	border-radius: 1px;
+	top: 77px;left: 26px;
+	z-index: 999999999;
 }
 .amenu li{
 	font-size: 15px;
@@ -128,7 +133,7 @@ a{
     padding-left: 30px;*/
 }
 .amenu li a{
-	color: #111;font-weight: bold;
+	color: #333;font-weight: bold;
 }
 /*.amenu li a:hover{
 	color: #cc0000;font-weight: bold;
@@ -141,7 +146,7 @@ a{
 	padding: 32px 0 50px;font-weight: bold;
 }
 .foot-left .HQ{
-	font-size: 20px;color: #cc0033;margin-bottom: 18px;
+	font-size: 20px;color: #cc0033;margin-bottom: 10px;
 	text-align: left;
 }
 .foot-left .detail{
@@ -149,16 +154,16 @@ a{
 	text-align: left;
 }
 .foot-left .detaila{
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 }
 .foot-left .detailb{
-	margin-bottom: 18px;
+	margin-bottom: 10px;
 }
 .foot-left .footul li{
 	float: left;margin-right: 24px;
 }
 .foot-left .footul li a{
-	color: #333;font-size: 15px;
+	color: #333;font-size: 14px;
 }
 .footer .autoC{
 	font-size: 14px;
@@ -169,22 +174,26 @@ a{
     white-space: nowrap;
 }
 .foot-right{
-	margin-top: 14px;
+	margin-top: 18px;
 }
+/*.tel{
+	margin: 8px 0 0 0;display: block;width: auto;
+}*/
 .footer .tel{
-	font-size: 22px;color: #cc0033;
+	font-size: 30px;color: #cc0033;
 }
 .footer .wechat{
 	margin-right: 12px;
+	/*border: 3px solid #fff;*/
 }
 .footer .webo{
-	font-size: 15px;color: #333;
+	font-size: 14px;color: #333;
 }
 .footer .weboa{
-	margin: 2px 0 5px 0;
+	margin: 0 0 3px 0;
 }
 .footer .webob{
-	margin-bottom: 8px;
+	/*margin-bottom: 8px;*/
 }
 #back{
 	position: fixed;
@@ -194,6 +203,7 @@ a{
     cursor: point;
     border-radius: 5px;
     z-index: 99999999;
+    cursor: pointer;
 }
 .share-icon-list{
 	/*position: absolute;top: 40px;
@@ -249,7 +259,6 @@ a{
     text-align: center;
     font-size: 18px;
     background: #fff;
-    
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -263,27 +272,27 @@ a{
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    width: 320px;
 }
 /*.swiper-slide{
 	margin-right: 2px;
 }*/
 .swiper-slide a{
-	display: block;width: 318px;height: 400px;
+	display: block;width: 320px;height: 400px;margin: 0 auto;
 }
 .swiper-slide a img{
-	display: block;width: 317px;height: 400px;
+	display: block;width: 316px;height: 400px;margin: 0 auto;
 }
-
 @media screen and (max-width: 1100px){
 	.martop{
 		margin-left: 12px;
 	}
 	.log-reg-ul{
-		margin-right: 30px;
+		margin-right: 10px;
 	}
-	.share-icon-list{
+	/*.share-icon-list{
 		right: 10%;
-	}
+	}*/
 	.foot-left{
 		margin-left: 20px;
 	}
@@ -296,6 +305,9 @@ a{
 	.width{
 		width: auto;	
 		margin: 0 auto;
+	}
+	#back {
+    	right: 3%;
 	}
 }
 /*@media (min-width: 500px) and (max-width: 800px){

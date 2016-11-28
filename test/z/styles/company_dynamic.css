@@ -8,7 +8,7 @@
     -khtml-opacity: 0.5;  
     opacity: 0.5; 
     opacity: .5;*/
-    width: 100%;height: 100%;z-index: 999;position: absolute;top: 0;left: 0;background: rgba(0,0,0,.5);
+    width: 100%;height: 100%;z-index: 999;position: absolute;top: 0;left: 0;background: rgba(0,0,0,.7);
 }
 .back-img h3{
 	font-size: 15px;color: #fff;margin: 55px 0 5px 0;text-align: center;
@@ -16,11 +16,20 @@
 .back-img h4{
 	font-size: 15px;color: #fff;text-align: center;
 }
+.back{
+	width: 100%;height: 100%;z-index: 999;position: absolute;top: 0;left: 0;
+}
+.back h3{
+	font-size: 16px;color: #CC0000;margin: 50px 0 5px 0;text-align: center;font-weight: bold;text-shadow:2px 2px 2px #fff;
+}
+.back h4{
+	font-size: 24px;color: #CC0000;text-align: center;font-weight: bold;text-shadow:2px 2px 2px #fff;
+}
 .three_ad li{
 	float: left;height: 150px;position: relative;width: 318px;
 }
 .three_ad li:nth-child(2){
-	margin: 0 2px;
+	margin: 0 2px;width: 320px;
 }
 .three_ad li img{
 	width: 100%;height: 100%;
@@ -30,17 +39,18 @@
 	/*position: absolute;bottom: 7px;left: 17px;*/
 }
 .ad_title{
-	font-size: 20px;color: #cc0000;margin: 32px 42px 32px;
+	font-size: 26px;color: #cc0000;margin: 32px 42px 32px;
 }
 .marul{
 	height: 100px;background-color: salmon; 
 }
 .marli{
-	margin: 0 42px 28px;height: 100px; 
+	margin: 0 42px 28px;height: 110px; 
 	/*background-color: #A4AEB9;*/
 }
 .leftimg{
-	width: 140px;height: 100px;margin-right: 15px;
+	width: 130px;height: 100px;margin-right: 15px;
+	border: 2px solid #fff;
 }
 .width_ad{
 	width: 960px;
@@ -55,19 +65,19 @@
 	margin-right: 20px;
 }
 .tit_h{
-	font-size: 16px;color: #cc0000;
+	font-size: 18px;color: #cc0000;
 	margin-right: 10px;
 }
 .omit{
 	font-size: 13px;
-	margin: 20px 15px 0 0;
+	margin: 26px 15px 0 0;
 	word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
     -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
     -webkit-line-clamp: 3; /** 显示的行数 **/
     overflow: hidden;  /** 隐藏超出的内容 **/
-    max-height: 50px;
+    max-height: 54px;
 } 
 .p_font{
 	font-size: 13px;color: #666;text-align: left;
@@ -92,22 +102,69 @@
 .col_img{
 	margin: 5px 10px 0 0;
 }
-.img100{
-	width: 100%;
-	height: 345px;
-}
 .media_life {
-	margin: 7px auto 0;
+	margin: 5px auto 0;
 }
 .media_class{
-	margin: 7px auto 0;
+	margin: 5px auto 0;
 }
 .bg{
-	background: url(../images/bgh.png) repeat fixed top;
+	background: url(../images/bgh.png);
+	background-size: cover;
 }
 #share{
-	position: absolute;top: 20px;right: 2px;
+	position: absolute;top: 20px;right: 0;
 }
-
-
+/*.menu .menubox .li:nth-child(6) .linea{
+	color: #cc0000;
+	border-bottom: 6px solid #cc0000;
+}*/
+.bglife{
+	background: url(../images/bglife.png);
+	background-size: cover;
+	height: 336px;
+}
+.lifebg{
+	position: absolute;top:0;left: 0;
+	width: 318px;height: 336px;
+}
+.swiper-container .swiper-button-prev{
+    background-image: url(../images/le.png);
+    width: 26px;
+    height: 52px;
+    z-index: 99999999;
+}
+.swiper-container .swiper-button-next{
+    background-image: url(../images/ri.png);
+    width: 26px;
+    height: 52px;
+    z-index: 99999999;
+}
+.psos{
+	position: relative;
+}
+.backcolor{
+	background-color: rgba(0,0,0,0.7);
+	filter:alpha(opacity=70);  
+    -moz-opacity:0.7;  
+    -khtml-opacity: 0.7;  
+    opacity: 0.7; 
+    opacity: .7;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*height: inherit;
+	width: inherit;*/
+	width: 331px;
+    height: 400px;
+}
+.ptitle{
+	font-size: 16px;margin-top: 194px;text-align: center;color: #fff;
+	/*font-weight: bold;*/
+}
+@media screen and (max-width: 1100px){
+	.omit{
+		margin: 20px 15px 0 0;
+	}
+}
   

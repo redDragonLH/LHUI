@@ -2,6 +2,8 @@ $(function(){
 //切换新闻内容
 	$(".three_ad li .back-img").on("click",function(){
 		$(this).addClass("hide").parent().siblings().find(".back-img").removeClass("hide");
+		$(this).parent().siblings().find(".back").addClass("hide")
+		$(this).parent().find(".back").removeClass("hide")
 		var num=$(this).parent().data("num");
 		if(num==1){
 			$(".ad_content").show();
@@ -13,6 +15,52 @@ $(function(){
 			$(".ad_content").hide();
 			$(".media_class").hide();
 			$(".ctrl_bg").removeClass("bg");
+			/*swiper三项切换*/
+			for(var i=0;i<6;i++){
+				var img='<div class="swiper-slide" data-number="'+i+'"><a class="amouse" data-title="户外培训" href="javascript:;"><img class="psos" src="../images/out.png" alt=""><p class="center" style="font-size: 13px;color: #fff;position: absolute;bottom: 40px;">户外培训</p><div></div></a></div>';
+				$(".swiper-container .swiper-wrapper").append(img);
+			}
+			//文本居中
+			var a=$(".swiper-slide").width();
+			var b=$(".center").width();
+			var c=a-b;
+			var d=c/2+"px";
+			$(".center").css({"left":d});
+			var swiper = new Swiper('.swiper-container',{
+				observer:true,
+		    	pagination: '.pagination',
+			    paginationClickable: true,
+			    slidesPerView: 3,
+		    	prevButton:'.swiper-button-prev',
+				nextButton:'.swiper-button-next',
+				loop: true
+		    });
+		//  鼠标滑过三项切换
+			$(".amouse").mouseenter(function(){
+				$(this).find("div").addClass("backcolor");
+				var title='<p class="ptitle">'+$(this).data("title")+'</p>';
+				$(this).find("div").append(title);
+				$(this).find(".center").hide();
+			}).mouseleave(function(){
+				$(this).find("div").removeClass("backcolor");
+				$(this).find("div").html("");
+				$(this).find(".center").show();
+			})
+			//控制左右切换的出现
+			$(".swiper-container").mousemove(function(e){
+				var xx=e.pageX;
+				var bodywidth=$("body").width();
+				var xy=bodywidth/2;
+				if(xy-xx>0){
+					$(".swiper-button-prev").show();
+					$(".swiper-button-next").hide();
+				}else{
+					$(".swiper-button-next").show();
+					$(".swiper-button-prev").hide();
+				}
+			}).mouseleave(function(){
+				$(".swiper-button-prev,.swiper-button-next").hide();
+			})
 		}else if(num==3){
 			$(".media_class").show();
 			$(".media_life").hide();
@@ -21,9 +69,9 @@ $(function(){
 		}
 	})
 	for(var i = 0;i<5;i++){
-		var html = '<li class="marli"><a style="color: #333;" href="http://www.baidu.com">'+
+		var html = '<li class="marli"><a style="color: #333;" href="javascript:;">'+
 				'<div class="news_top fl over">'+
-					'<img class="leftimg fl" src="../images/wechat.png" alt="" />'+
+					'<img class="leftimg fl" src="../images/kkj.png" alt="" />'+
 					'<div class="centercont">'+
 						'<h4 class="tit_h">高铁巨大的场聚效应，成为品牌营销的理想入口</h4>'+
 						'<p class="omit">华铁传媒独家垄断上海铁路局所辖全部高铁动车组媒体代理运营权，囊括包括京沪、沪宁高铁、沪杭高铁、宁杭甬高铁、沿海(沪深)客运专线、沪广高铁、沪汉蓉客运专线、沪昆高铁、徐兰高铁、合福高铁以及华东的宁启、宁安、金丽温等客运专线资源，在纵横交错的高铁主干线上形成最强经济实力的黄金网络布局。不仅如此，华铁传媒独家代理成都铁路局沪汉蓉全线资源，及以成都、重庆为中心，辐射至上海、北京、广州、南京、杭州、宁波等华东沿海城市的全线直达高铁动车组线路资源，完成了高铁媒体线路资源版图中西南地区的战略部署，全面布局国家长江经济带发展规划区域，并与国家长江经济带战略形成同步。</p>'+
@@ -38,6 +86,7 @@ $(function(){
 			'</a></li>';
     	$(".ulnews").append(html);
 	}
+
 	
 /*	
 //接口地址
@@ -67,7 +116,6 @@ $(function(){
 	var numTotle = 0;//总页数
 	
 	function getArchiveList(add,pageNum,pageSize,status,callback){
-	
 		goAjax({
 			"sn":pageNum,
 			"nu":pageSize,
@@ -126,11 +174,6 @@ $(function(){
 			pageNum = ++pageNum>numTotle ? numTotle : pageNum;
 			getArchiveList(msg_add,pageNum,pageSize,99)
 		});
-		//搜索按钮
-		$(".search-btn").click(function(event) {
-			pageNum = 1;
-			getArchiveList(msg_add,pageNum,pageSize,99)
-		});
 		//跳转按钮
 		$(".jump-btn").click(function(event) {
 			pageNum = $("#jumpNum").val();
@@ -140,7 +183,6 @@ $(function(){
 			getArchiveList(msg_add,pageNum,pageSize,99)
 		});
 	});
-	
 */
 })
 function goAjax(paramObj,urlStr,callback,type){
@@ -149,7 +191,7 @@ function goAjax(paramObj,urlStr,callback,type){
 	}
 	$.ajax({
 		url: urlStr,
-        type: "POST",
+        type: "GET",
         jsonp: "callback",
         dataType: type,
         async: false,
@@ -159,6 +201,6 @@ function goAjax(paramObj,urlStr,callback,type){
 		callback(res)
 	})
 	.fail(function() {
-		alery("数据出现问题!");
+		alert("数据出现问题!");
 	})
 }

@@ -7,7 +7,7 @@
 	margin-left: 50px;
 }
 .NEWS-R{
-	margin: 40px 0 0 0;width: 300px;
+	margin: 40px 0 0 0;width: 285px;
 	padding-left: 25px;border-left: 3px solid #CC0000;
 	margin-left: 50px;
 }
@@ -39,12 +39,12 @@
 	margin-top: 2px;
 }
 .newstitle{
-	font-size: 22px;color: #CC0000;width: 80%;line-height: 36px;
+	font-size: 30px;color: #CC0000;width: 80%;line-height: 40px;
 	margin-bottom: 32px;
 }
 .newstitle_r{
-	font-size: 22px;color: #CC0000;width: 80%;line-height: 36px;
-	margin-bottom: 32px;
+	font-size: 30px;color: #CC0000;width: 80%;line-height: 36px;
+	margin-bottom: 28px;
 }
 .newsdata_a{
 	margin-top: 2px;
@@ -85,7 +85,7 @@
 	margin-bottom: 27px;
 }
 .news_p{
-	font-size: 13px;color: #333;line-height: 20px;margin-bottom: 16px;
+	font-size: 14px;color: #333;line-height: 20px;margin-bottom: 16px;
 }
 .news_img{
 	width: 100%;background-size: cover;margin-bottom: 16px;
@@ -98,31 +98,47 @@
 }
 .aok{
 	font-size: 14px;color: #333;
-	background: url(../images/news9.gif) no-repeat;
-	text-indent: 10px;
+	/*background: url(../images/news9.gif) no-repeat;*/
+	text-indent: 1px;
+	margin-left: 9px;
 	word-break: break-all;
     text-overflow: ellipsis;
     display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
     -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
     -webkit-line-clamp: 3; /** 显示的行数 **/
     overflow: hidden;  /** 隐藏超出的内容 **/
-    max-height: 56px;
+    max-height: 88px;
     margin-bottom: 10px;
+    line-height: 30px;
 }
 .font16{
-	font-size: 14px;
+	font-size: 13px;
+	margin-top: 1px;
 }
 .href_news li{
 	margin-bottom: 20px;
+	position: relative;
+}
+.href_news li img{
+	position: absolute;
+	margin-top: 6px;
 }
 .spanok{
-	font-size: 12px;color: #666;padding-top: 12px;
+	font-size: 12px;color: #666;padding-top: 10px;
+	margin-left: 10px;
 }
 .href_news li:last-child{
 	margin-bottom: 0;
 }
 #share-icon-list{
 	clear: both;position: absolute;top: 25px;right: 0;background-color: #da929c;
+}
+/*.menu .menubox .li:nth-child(6) .linea{
+	color: #cc0000;
+	border-bottom: 6px solid #cc0000;
+}*/
+.score{
+	color: #CC0000;
 }
 @media screen and (max-width: 1100px){
 	.newtime{

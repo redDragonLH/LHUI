@@ -1,6 +1,5 @@
 $(function(){
 	/*图片切换*/	
-//	$(".turn-warp").slide({titCell:".ph_p_warp",mainCell:".tw",autoPage:true,effect:"leftLoop",autoPlay:true,delayTime:1000,interTime:3000});
 	$(".turn-warp").slide({titCell:".ph_p_warp",mainCell:".tw",autoPage:true,effect:"leftLoop",
 	startFun:function(i,c){
 		if(i==0){
@@ -18,7 +17,6 @@ $(function(){
 		if(index==$(".tw li").length-1){
 			index=1;
 		}
-//		console.log(index);
 		$(".indexhide").hide();
 		$("[data-num="+index+"]").show();
 	})

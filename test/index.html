@@ -6,6 +6,32 @@
 </head>
 <body>
   <script type="text/javascript">
+    function rnd(n, m){
+    	var random = Math.floor(Math.random()*(m-n+1)+n);
+    	return random;
+    }
+  </script>
+  <!-- <script type="text/javascript">
+  function once(fn){
+ return function(){
+   try{
+     fn.apply(this, arguments);
+   }catch(ex){
+     console.log("'this function can only called by once.'");
+  }finally{
+     fn = null;
+   }
+ }
+}
+
+var g = once(function(x) {
+  console.log(x)
+});
+g(1);
+g(2);
+g(3);
+  </script> -->
+  <!-- <script type="text/javascript">
   function getVendorPrefix() {
 // 使用body是为了避免在还需要传入元素
 var body = document.body || document.documentElement,
@@ -30,6 +56,6 @@ function whatBrowser() {
 	console.log(navigator.userAgent)
 }
  whatBrowser()
-  </script>
+  </script> -->
 </body>
 </html>
