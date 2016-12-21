@@ -7,6 +7,50 @@ lh-button-circle：圆形按钮
 lh-button-hidden：隐藏按钮
 lh-button-disasbled：禁用按钮
 */
+/*清楚默认样式*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-width: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+input, textarea, keygen, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+button {
+  padding: 0.5em 1em;
+}
+
+button {
+    -webkit-appearance: button;
+}
 /*初始化*/
 .lh-button{
   display: inline-block;
@@ -21,6 +65,10 @@ lh-button-disasbled：禁用按钮
   -ms-user-select: none;
   user-select: none; /*固定宽高，使之不会增加*/
   box-sizing: border-box;
+  font-family: Georgia, "Times New Roman",
+             "Microsoft YaHei", "微软雅黑",
+             STXihei, "华文细黑",
+             serif;
 }
 .lh-button{
   background-color: #e6e6e6;
