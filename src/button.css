@@ -8,49 +8,6 @@ lh-button-hidden：隐藏按钮
 lh-button-disasbled：禁用按钮
 */
 /*清楚默认样式*/
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    -webkit-appearance: button;
-    cursor: pointer;
-    border-width: 0;
-}
-button,
-input {
-    line-height: normal;
-}
-button,
-input,
-select,
-textarea {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
-}
-input, textarea, keygen, select, button {
-    text-rendering: auto;
-    color: initial;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    display: inline-block;
-    text-align: start;
-    margin: 0em 0em 0em 0em;
-}
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="file"]::-webkit-file-upload-button,
-button {
-  padding: 0.5em 1em;
-}
-
-button {
-    -webkit-appearance: button;
-}
 /*初始化*/
 .lh-button{
   display: inline-block;
@@ -65,6 +22,8 @@ button {
   -ms-user-select: none;
   user-select: none; /*固定宽高，使之不会增加*/
   box-sizing: border-box;
+
+  font-size: 16px;
   font-family: Georgia, "Times New Roman",
              "Microsoft YaHei", "微软雅黑",
              STXihei, "华文细黑",
@@ -73,14 +32,19 @@ button {
 .lh-button{
   background-color: #e6e6e6;
   padding: 0.5em 1em;
-  color: rgba(0, 0, 0, 0.80);;
+  color: rgba(0, 0, 0, 0.80);
+  outline: 0;
+  border: none;
+
 }
 /*去掉聚焦时的边框  兼容火狐*/
-.pure-button::-moz-focus-inner {
+.lh-button::-moz-focus-inner {
     padding: 0;
     border: 0;
 }
-
+.lh-button:focus {
+    outline: 0;
+}
 /*添加滤镜，给点击的元素半透明黑色滤镜，造成点击效果*/
 .lh-button-hover,
 .lh-button:hover,
@@ -93,7 +57,7 @@ button {
 /*链接激活时添加阴影*/
 .lh-button-active,
 .lh-button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 4px rgba(0,0,0, 0.20) inset;
     border-color: #000;
 }
 /*3d效果*/
