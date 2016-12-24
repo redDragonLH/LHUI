@@ -6,6 +6,8 @@ lh-button-rounded：圆角效果
 lh-button-circle：圆形按钮
 lh-button-hidden：隐藏按钮
 lh-button-disasbled：禁用按钮
+lh-button-red 红色背景
+lh-button-green 绿色背景
 */
 /*清楚默认样式*/
 /*初始化*/
@@ -28,6 +30,18 @@ lh-button-disasbled：禁用按钮
              "Microsoft YaHei", "微软雅黑",
              STXihei, "华文细黑",
              serif;
+}
+.lh-button{
+  text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em 0em 0em 0em;
 }
 .lh-button{
   background-color: #e6e6e6;
@@ -58,7 +72,9 @@ lh-button-disasbled：禁用按钮
 .lh-button-active,
 .lh-button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 4px rgba(0,0,0, 0.20) inset;
-    border-color: #000;
+    border:0px !important;
+    outline: 0;
+
 }
 /*3d效果*/
 .lh-button-3d{
@@ -75,6 +91,19 @@ lh-button-disasbled：禁用按钮
 /*隐藏按钮*/
 .lh-button-hidden{
   display: none;
+}
+/*红色背景*/
+.lh-button-red{
+  color: #f7f7f7;
+  background-color: #f44336;
+}
+.lh-button-green{
+  color: #f7f7f7;
+  background-color: #4CAF50;
+}
+.lh-button-blue{
+  color: #f7f7f7;
+  background-color: #008CBA;
 }
 /*禁用*/
 /*找到： http://blog.csdn.net/freshlover/article/details/17143341 */
