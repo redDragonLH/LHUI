@@ -8,6 +8,9 @@ lh-button-hidden：隐藏按钮
 lh-button-disasbled：禁用按钮
 lh-button-red 红色背景
 lh-button-green 绿色背景
+lh-button-shadow 点击显示内阴影效果
+lh-button-outershadow 外阴影效果
+lh-button-press 动画 按下 效果
 */
 /*清楚默认样式*/
 /*初始化*/
@@ -17,7 +20,6 @@ lh-button-green 绿色背景
   text-align: center;
   line-height: normal;
   vertical-align:middle;
-
   -webkit-user-drag: none; /*设置元素可拖动，不可拖动，选中后可以*/
   -webkit-user-select: none; /*是否可以选中，不可选中*/
   -moz-user-select: none; /*前缀 下同*/
@@ -59,22 +61,78 @@ lh-button-green 绿色背景
 .lh-button:focus {
     outline: 0;
 }
+/*按下动画*/
+.lh-button-press{
+  box-shadow: 0 .4em #999;
+  border-radius: 6px;
+}
+.lh-button-press:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*外阴影*/
+.lh-button-outershadow,
+.lh-button-outershadow-hover{
+  transition: box-shadow .5s;
+}
+
+.lh-button-outershadow-hover,
+.lh-button-outershadow:hover,
+.lh-button-outershadow:focus{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 .5em 1em 0 rgba(0,0,0,0.19) !important;
+}
 /*添加滤镜，给点击的元素半透明黑色滤镜，造成点击效果*/
-.lh-button-hover,
-.lh-button:hover,
-.lh-button:focus {
+.lh-button-press:hover,
+.lh-button-press:focus,/**给按下增加效果*/
+.lh-button-shadow-hover,
+.lh-button-shadow:hover,
+.lh-button-shadow:focus {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
     background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
     background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
 }
 /*链接激活时添加阴影*/
-.lh-button-active,
-.lh-button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 4px rgba(0,0,0, 0.20) inset;
+.lh-button-shadow-active,
+.lh-button-shadow:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 8px rgba(0,0,0, 0.20) inset;
     border:0px !important;
     outline: 0;
+}
+/*波纹效果 ripple*/
+.lh-button-ripple{
+  position: relative;
+  border: none;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.lh-button-ripple:after {
+    content: "";
 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.1) 40%, rgba(0,0,0, 0.10));
+    background-image: linear-gradient(transparent, rgba(0,0,0, 0.1) 40%, rgba(0,0,0, 0.10));
+
+
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+.lh-button-ripple:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 /*3d效果*/
 .lh-button-3d{
