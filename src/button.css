@@ -26,6 +26,7 @@ lh-button-press 动画 按下 效果
   -ms-user-select: none;
   user-select: none; /*固定宽高，使之不会增加*/
   box-sizing: border-box;
+  text-decoration: none;
 
   font-size: 16px;
   font-family: Georgia, "Times New Roman",
