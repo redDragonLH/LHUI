@@ -62,6 +62,45 @@ lh-button-press 动画 按下 效果
 .lh-button:focus {
     outline: 0;
 }
+/*动画*/
+.lh-button-an{
+border-radius: 4px;
+text-align: center;
+font-size: 28px;
+width: 200px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+
+}
+.lh-button-an span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.lh-button-an span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.lh-button-an:hover span {
+  padding-right: 25px;
+}
+
+.lh-button-an:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/**/
+.lh-button-big{
+  padding: .5em 1.6em;
+  font-size: 30px;
+}
 /*按下动画*/
 .lh-button-press{
   box-shadow: 0 .4em #999;
