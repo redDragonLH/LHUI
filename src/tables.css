@@ -11,38 +11,15 @@
 
 }
 .lh-table{
-  cellpadding:0; cellspace:0;
+  border-collapse:collapse;
   border: 1px solid #cdcdcd;
-  font-family: "Microsoft YaHei","Heiti SC",serif;
-}
-.lh-table caption{
-  caption-side:top;
-  font-size: 1em;
-  font-weight: bold;
-  font-family: "Microsoft YaHei","Heiti SC",serif;
-  text-align: center;
-  vertical-align: middle;
-  padding: 1em 0;
+  border-spacing:0;
+  empty-cells: show;
 }
 .lh-table tr{
-  text-align: center;
-  valign:middle;
-  display: block;;
-  border-bottom: 1px solid #cdcdcd;
-}
-.lh-table tfoot tr:last-child{
-  border-bottom-width: 0px ;
-}
-.lh-table td,
-.lh-table th{
-font-family: inherit;
-text-align: center;
-vertical-align: middle;
-padding: .5em .5em;
-  margin: 0;
 
 }
-.lh-table tbody td,
-.lh-table tbody th{
-  font-weight: 400;
+.lh-table th,
+.lh-table td{
+  text-align: center;
 }
