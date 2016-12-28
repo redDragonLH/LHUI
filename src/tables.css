@@ -16,10 +16,27 @@
   border-spacing:0;
   empty-cells: show;
 }
+.lh-table caption{
+  font-size: 18px;
+  line-height: 2em;
+}
+.lh-table thead{
+  background-color: #e0e0e0;
+  font-weight: 600;
+}
+.lh-table tfoot{
+  font-weight: 800;
+}
 .lh-table tr{
+
+}
+.lh-table-odd{
 
 }
 .lh-table th,
 .lh-table td{
+  padding: .4em 1em;
+  font-weight: 400;
   text-align: center;
+  border-right: 1px solid #cdcdcd;
 }
