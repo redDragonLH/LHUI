@@ -21,20 +21,40 @@
   line-height: 2em;
 }
 .lh-table thead{
-  background-color: #e0e0e0;
+  background-color: #e4e1e1;
+
+}
+.lh-table thead td,
+.lh-table thead th{
+  padding: .4em 1em;
+  text-align: center;
+  border-right: 1px solid #cdcdcd;
+
   font-weight: 600;
 }
 .lh-table tfoot{
+  padding: .4em 1em;
+  font-weight: 400;
+  text-align: center;
+  border-right: 1px solid #cdcdcd;
   font-weight: 800;
 }
 .lh-table tr{
 
 }
-.lh-table-odd{
-
+.lh-table-odd tbody td {
+    background-color: #f2f2f2;
 }
-.lh-table th,
-.lh-table td{
+.lh-table-striped tbody tr:nth-child(2n-1) td,
+.lh-table-striped tbody tr:nth-child(2n-1) th{
+    background-color: #f2f2f2;
+}
+.lh-table-borderend tbody tr,
+.lh-table-borderend tbody td{
+  border-bottom: 1px solid #cdcdcd;
+}
+.lh-table tbody th,
+.lh-table tbody td{
   padding: .4em 1em;
   font-weight: 400;
   text-align: center;
