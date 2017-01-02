@@ -1,4 +1,15 @@
 .lh-menu{
   display: block;
-
+  margin: 0 auto;
+}
+.lh-menu>*{
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  padding: 0.4em 2em;
+  transition: all .5s;
+}
+.lh-menu>*:hover{
+color:#cdcdcd;
+background-color: #eeeeee;
 }
