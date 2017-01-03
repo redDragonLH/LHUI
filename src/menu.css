@@ -1,15 +1,34 @@
 .lh-menu{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
   margin: 0 auto;
+}
+.lh-menu-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 .lh-menu>*{
   cursor: pointer;
   text-align: center;
   display: inline-block;
   padding: 0.4em 2em;
-  transition: all .5s;
+  transition: color .5s;
 }
-.lh-menu>*:hover{
-color:#cdcdcd;
-background-color: #eeeeee;
+.li-menu>li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.lh-menu-link,
+.lh-menu-link a{
+  display: block;
+  text-decoration: none; /*干掉下划线*/
+  white-space: nowrap;  /*空白符会被忽略*/
+}
+.lh-menu-hover>*:hover{
+color:#cccccc;
 }
