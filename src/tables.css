@@ -11,6 +11,7 @@
 
 }
 .lh-table{
+  table-layout:fixed;  /*表格布局算法*/
   border-collapse:collapse;
   border: 1px solid #cdcdcd;
   border-spacing:0;
