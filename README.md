@@ -1,4 +1,4 @@
-#LHUI ![bulid](https://img.shields.io/travis/USER/REPO.svg)
+# LHUI ![bulid](https://img.shields.io/travis/redDragonLH/LHUI/master.svg)
 ```参考雅虎的 purecss做的 ```
 
 我也要将Nomalize作为基础样式
