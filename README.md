@@ -1,7 +1,5 @@
 # LHUI ![bulid](https://img.shields.io/travis/redDragonLH/LHUI/master.svg)
-```参考雅虎的 purecss做的 ```
 
-我也要将Nomalize作为基础样式
 ###Nomalize.css样式重置
   pure是以Nomalize为基础进行的样式重置，所以也把Nomalize放在这里，并且找的一版有中文注释的代码（版权归 AmnEsia 所有）地址为：  
   http://www.w3cfuns.com/notes/16799/70306b117ceaf74825b5099ac6687a50.html  
@@ -14,7 +12,7 @@
 | layout| 完成（继续补充） |
 | menu| （开始启动） |
 
-base.css是基础的样式重置，使样式在所有主流浏览器上都呈现一样的样式(就是Nomalize...)
+base.css是基础的样式重置，使样式在所有主流浏览器上都呈现一样的样式
 
   ####form.css  
   form.css是表单样式UI，有一部分响应式  
