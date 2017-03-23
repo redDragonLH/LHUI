@@ -1,10 +1,10 @@
 # LHUI ![bulid](https://img.shields.io/travis/redDragonLH/LHUI/master.svg)
 
-###Nomalize.css样式重置
+### Nomalize.css样式重置
   pure是以Nomalize为基础进行的样式重置，所以也把Nomalize放在这里，并且找的一版有中文注释的代码（版权归 AmnEsia 所有）地址为：  
   http://www.w3cfuns.com/notes/16799/70306b117ceaf74825b5099ac6687a50.html  
 
-##需要写的方面##
+**需要写的方面**  
 | form | 未写 |
 | ----- | ----: |
 | button| 完成（继续补充） |
@@ -14,7 +14,7 @@
 
 base.css是基础的样式重置，使样式在所有主流浏览器上都呈现一样的样式
 
-  ####form.css  
+  #### form.css  
   form.css是表单样式UI，有一部分响应式  
   *、重叠样式class 名 pure-form-stacked  
   *、对齐的表格样式，from :pure-form-aligned.input的父元素：pure-control-group  
@@ -23,14 +23,14 @@ base.css是基础的样式重置，使样式在所有主流浏览器上都呈现
   *、输入框自定义大小，class: pure-input-1;与栅格类似  
   *、圆角 ：class:pure-input-rounded;  
 <!--其他框架文件夹-->
-###深感自己不足，又建立了其他 '其他框架'文件夹来搜集观摩好的代码
+### 深感自己不足，又建立了其他 '其他框架'文件夹来搜集观摩好的代码
 1、有bootstrap-responsive 文件，关于bootstrap响应式的文件  
 2、在网上搜集到的button按钮的样式库文件 ：buttons.css (http://www.bootcss.com/p/buttons/)  
 3、语义化  Semantic UI (http://www.semantic-ui.com/)
 
-######preu就是写出一个大概的框架，写出一个样式，然后更多的东西都去让开发者自定义，我觉的这才是真正高度定制的ui，我也将追寻这个核心思想，写出好的框架
+###### preu就是写出一个大概的框架，写出一个样式，然后更多的东西都去让开发者自定义，我觉的这才是真正高度定制的ui，我也将追寻这个核心思想，写出好的框架
 ***
-####自己的   
+#### 自己的   
 ######栅格准备用新出的flexbox来写，虽然新老版本兼容有问题，而且浏览器兼容也有问题
 有三个版本，旧版、新版、混合版。
 各种情况都得兼容    
