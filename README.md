@@ -5,7 +5,7 @@
   http://www.w3cfuns.com/notes/16799/70306b117ceaf74825b5099ac6687a50.html  
 
 **需要写的方面**  
-| form | 未写 |
+| form | 未写 | 
 | ----- | ----: |
 | button| 完成（继续补充） |
 | table| 完成（继续补充） |
