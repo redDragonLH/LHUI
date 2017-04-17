@@ -1,5 +1,5 @@
 {
 	"coverageDirectory": "<rootDir>/coverage",
 	"bail": true,
-	"collectCoverage": true,
+	"collectCoverage": true
 }
