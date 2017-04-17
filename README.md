@@ -1,11 +1,11 @@
-# LHUI ![bulid](https://img.shields.io/travis/redDragonLH/LHUI/master.svg)
+# LHUI ![bulid](https://img.shields.io/travis/redDragonLH/LHUI/master.svg)[![codecov](https://codecov.io/gh/redDragonLH/LHUI/branch/master/graph/badge.svg)](https://codecov.io/gh/redDragonLH/LHUI)
 
 ### Nomalize.css样式重置
   pure是以Nomalize为基础进行的样式重置，所以也把Nomalize放在这里，并且找的一版有中文注释的代码（版权归 AmnEsia 所有）地址为：  
   http://www.w3cfuns.com/notes/16799/70306b117ceaf74825b5099ac6687a50.html  
 
 **需要写的方面**  
-| form | 未写 | 
+| form | 未写 |
 | ----- | ----: |
 | button| 完成（继续补充） |
 | table| 完成（继续补充） |
