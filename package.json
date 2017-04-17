@@ -15,7 +15,7 @@
     "tap": "^10.3.2"
   },
   "scripts": {
-    "test": "jest && tap test/*.js",
+    "test": "jest --config config/jest/coverage.json && tap test/*.js",
     "test:coverage": "jest --config config/jest/coverage.json && tap test/*.js",
     "codecov": "codecov"
   },
